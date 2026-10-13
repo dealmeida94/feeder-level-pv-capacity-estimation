@@ -1,0 +1,240 @@
+
+======================================================================
+VERIFICAÇÃO DOS CAMINHOS
+======================================================================
+RAIZ_DIR : /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02
+MASTER_BL: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/carga_base/Master_sem_PV.dss
+PVSHAPE  : /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/cenario_com_PV/PVShape.dss
+COM_PV   : /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/cenario_com_PV
+
+Arquivos existem?
+MASTER_BL: True
+PVSHAPE  : True
+COM_PV   : True
+
+PV Masters encontrados:
+  /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/cenario_com_PV/PVShape.dss
+  /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/cenario_com_PV/PV_Master20.dss
+  /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/cenario_com_PV/PV_Master20_VV.dss
+  /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/cenario_com_PV/PV_Master40.dss
+  /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/cenario_com_PV/PV_Master40_VV.dss
+  /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/cenario_com_PV/PV_Master60.dss
+  /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/cenario_com_PV/PV_Master60_VV.dss
+  /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/cenario_com_PV/geradoresPV_20.dss
+  /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/cenario_com_PV/geradoresPV_20_VV.dss
+  /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/cenario_com_PV/geradoresPV_40.dss
+  /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/cenario_com_PV/geradoresPV_40_VV.dss
+  /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/cenario_com_PV/geradoresPV_60.dss
+  /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/cenario_com_PV/geradoresPV_60_VV.dss
+======================================================================
+
+
+PVShape utilizado: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/inputs/cenario_com_PV/PVShape.dss
+Valores lidos do vetor mult: 8760
+Min=0.000000 | Max=1.000000
+
+Cenários encontrados:
+  20% | FP = 1 | PV_Master20.dss -> geradoresPV_20.dss
+  20% | Volt-VAr | PV_Master20_VV.dss -> geradoresPV_20_VV.dss
+  40% | FP = 1 | PV_Master40.dss -> geradoresPV_40.dss
+  40% | Volt-VAr | PV_Master40_VV.dss -> geradoresPV_40_VV.dss
+  60% | FP = 1 | PV_Master60.dss -> geradoresPV_60.dss
+  60% | Volt-VAr | PV_Master60_VV.dss -> geradoresPV_60_VV.dss
+
+Simulando cenário com 0% de penetração PV (FP = 1)
+
+Os LoadShapes foram carregados.
+
+Simulação configurada.
+
+
+Tabela única de FP das cargas gerada e salva em:
+/home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/outputs/cenarios_PV/FP_cargas_aleatorio.xlsx
+   0 P=1184.4 Q=309.1 PV=0.0
+1000 P=1431.5 Q=425.6 PV=0.0
+2000 P=1520.8 Q=474.8 PV=0.0
+3000 P=786.7 Q=108.5 PV=0.0
+4000 P=2244.8 Q=776.1 PV=0.0
+5000 P=2016.2 Q=690.7 PV=0.0
+6000 P=868.4 Q=153.7 PV=0.0
+7000 P=1369.6 Q=373.5 PV=0.0
+8000 P=1832.2 Q=620.9 PV=0.0
+
+Resultados salvos em /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/outputs/cenarios_PV
+____________________________________________________________
+Figure(1200x500)
+Figure(1200x500)
+Figure(1200x500)
+
+Simulando cenário com 20% de penetração PV (FP = 1)
+
+Os LoadShapes foram carregados.
+
+Simulação configurada.
+
+
+Tabela única de FP reutilizada:
+/home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/outputs/cenarios_PV/FP_cargas_aleatorio.xlsx
+   0 P=1184.4 Q=309.1 PV=0.0
+1000 P=1431.5 Q=425.6 PV=0.0
+2000 P=1385.8 Q=470.6 PV=133.4
+3000 P=786.7 Q=108.5 PV=0.0
+4000 P=2244.8 Q=776.1 PV=0.0
+5000 P=1928.3 Q=686.4 PV=86.3
+6000 P=868.4 Q=153.7 PV=0.0
+7000 P=1294.5 Q=371.3 PV=74.2
+8000 P=1638.4 Q=611.6 PV=190.6
+
+Resultados salvos em /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/outputs/cenarios_PV
+____________________________________________________________
+Figure(1200x500)
+Figure(1200x500)
+Figure(1200x500)
+
+Simulando cenário com 20% de penetração PV (Volt-VAr)
+
+Os LoadShapes foram carregados.
+
+Simulação configurada.
+
+
+Tabela única de FP reutilizada:
+/home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/outputs/cenarios_PV/FP_cargas_aleatorio.xlsx
+   0 P=1184.4 Q=332.0 PV=0.0
+1000 P=1431.5 Q=426.3 PV=0.0
+2000 P=1385.8 Q=471.7 PV=133.4
+3000 P=786.7 Q=118.4 PV=0.0
+4000 P=2244.7 Q=776.1 PV=0.0
+5000 P=1928.3 Q=687.2 PV=86.3
+6000 P=868.4 Q=161.0 PV=0.0
+7000 P=1294.5 Q=371.9 PV=74.2
+8000 P=1638.4 Q=612.0 PV=190.6
+
+Resultados salvos em /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/outputs/cenarios_PV
+____________________________________________________________
+Figure(1200x500)
+Figure(1200x500)
+Figure(1200x500)
+
+Simulando cenário com 40% de penetração PV (FP = 1)
+
+Os LoadShapes foram carregados.
+
+Simulação configurada.
+
+
+Tabela única de FP reutilizada:
+/home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/outputs/cenarios_PV/FP_cargas_aleatorio.xlsx
+   0 P=1184.4 Q=309.1 PV=0.0
+1000 P=1431.5 Q=425.6 PV=0.0
+2000 P=1251.3 Q=466.5 PV=266.3
+3000 P=786.7 Q=108.5 PV=0.0
+4000 P=2244.8 Q=776.1 PV=0.0
+5000 P=1840.6 Q=682.1 PV=172.3
+6000 P=868.4 Q=153.7 PV=0.0
+7000 P=1219.7 Q=369.0 PV=148.1
+8000 P=1445.1 Q=603.0 PV=380.5
+
+Resultados salvos em /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/outputs/cenarios_PV
+____________________________________________________________
+Figure(1200x500)
+Figure(1200x500)
+Figure(1200x500)
+
+Simulando cenário com 40% de penetração PV (Volt-VAr)
+
+Os LoadShapes foram carregados.
+
+Simulação configurada.
+
+
+Tabela única de FP reutilizada:
+/home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/outputs/cenarios_PV/FP_cargas_aleatorio.xlsx
+   0 P=1184.5 Q=347.5 PV=0.0
+1000 P=1431.5 Q=426.4 PV=0.0
+2000 P=1251.3 Q=469.1 PV=266.3
+3000 P=786.7 Q=125.6 PV=0.0
+4000 P=2244.7 Q=776.2 PV=0.0
+5000 P=1840.6 Q=682.8 PV=172.3
+6000 P=868.4 Q=165.9 PV=0.0
+7000 P=1219.8 Q=370.7 PV=148.1
+8000 P=1445.1 Q=603.1 PV=380.5
+
+Resultados salvos em /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/outputs/cenarios_PV
+____________________________________________________________
+Figure(1200x500)
+Figure(1200x500)
+Figure(1200x500)
+
+Simulando cenário com 60% de penetração PV (FP = 1)
+
+Os LoadShapes foram carregados.
+
+Simulação configurada.
+
+
+Tabela única de FP reutilizada:
+/home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/outputs/cenarios_PV/FP_cargas_aleatorio.xlsx
+   0 P=1184.4 Q=309.1 PV=0.0
+1000 P=1431.5 Q=425.6 PV=0.0
+2000 P=1115.6 Q=463.2 PV=400.6
+3000 P=786.7 Q=108.5 PV=0.0
+4000 P=2244.8 Q=777.1 PV=0.0
+5000 P=1752.2 Q=678.7 PV=259.2
+6000 P=868.4 Q=153.7 PV=0.0
+7000 P=1144.2 Q=367.0 PV=222.7
+8000 P=1251.0 Q=597.1 PV=572.4
+
+Resultados salvos em /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/outputs/cenarios_PV
+____________________________________________________________
+Figure(1200x500)
+Figure(1200x500)
+Figure(1200x500)
+
+Simulando cenário com 60% de penetração PV (Volt-VAr)
+
+Os LoadShapes foram carregados.
+
+Simulação configurada.
+
+
+Tabela única de FP reutilizada:
+/home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/outputs/cenarios_PV/FP_cargas_aleatorio.xlsx
+   0 P=1184.6 Q=361.8 PV=0.0
+1000 P=1431.5 Q=427.2 PV=0.0
+2000 P=1115.7 Q=468.3 PV=400.6
+3000 P=786.7 Q=134.7 PV=0.0
+4000 P=2244.7 Q=776.2 PV=0.0
+5000 P=1752.2 Q=680.5 PV=259.2
+6000 P=868.4 Q=172.7 PV=0.0
+7000 P=1144.3 Q=370.5 PV=222.7
+8000 P=1251.0 Q=598.3 PV=572.4
+
+Resultados salvos em /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/outputs/cenarios_PV
+____________________________________________________________
+Figure(1200x500)
+Figure(1200x500)
+Figure(1200x500)
+0.6
+0.4
+0.2
+0.0
+Figure(1400x600)
+Figure(1400x600)
+Figure(1200x500)
+Figure(1200x500)
+Figure(1200x500)
+Figure(1200x500)
+
+Comparação FP=1 x Volt-VAr salva em:
+/home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/dados/outputs/cenarios_PV/Comparacao_FP1_vs_VoltVar.xlsx
+
+Simulações concluídas
+
+Tempo de execução: 04m:25s
+==============================================================================
+STEP 3: Simulation controller
+Script: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_02/scripts/controle_da_simulacao/controlador_geral_VoltVar.py
+Started: 2026-09-17T13:05:46
+==============================================================================
+

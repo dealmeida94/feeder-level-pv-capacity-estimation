@@ -1,0 +1,242 @@
+
+==============================================================================
+KARA 2018 - ESTIMADOR ADAPTADO AO PROXY PVWATTS
+==============================================================================
+
+Projeto: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_09
+Resultados: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_09/dados/outputs/cenarios_PV
+Potências reais: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_09/logs/Potencias_Cenarios.xlsx
+Ambientes processados: TODOS
+  - FP=1
+  - Volt-VAr
+Saída da planilha: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_09/modelo_de_Kara_2018
+
+Janelas temporais:
+  1_mes      -> 744 h
+  6_meses    -> 4344 h
+  ano        -> 8760 h
+
+Resultados encontrados:
+  resultados0.parquet                 | 0% | FP=1
+  resultados20.parquet                | 20% | FP=1
+  resultados20_VV.parquet             | 20% | Volt-VAr
+  resultados40.parquet                | 40% | FP=1
+  resultados40_VV.parquet             | 40% | Volt-VAr
+  resultados60.parquet                | 60% | FP=1
+  resultados60_VV.parquet             | 60% | Volt-VAr
+
+Potências reais dos cenários:
+  20% -> 294.62 kW
+  40% -> 589.24 kW
+  60% -> 883.86 kW
+
+==============================================================================
+ESTIMAÇÕES
+==============================================================================
+
+Ignorando 0: potência real não encontrada.
+
+------------------------------------------------------------------------------
+Cenário: 20 | janela: 1_mes | 744 h
+  Potência real     = 294.62 kW
+  Potência estimada = 269.23 kW
+  Erro              = 8.62%
+  k_eff             = 2.188172
+  C_eff             = 269.23 kW
+  R                 = 526.54 kW
+  R²                = 0.9822
+
+------------------------------------------------------------------------------
+Cenário: 20 | janela: 6_meses | 4344 h
+  Potência real     = 294.62 kW
+  Potência estimada = 273.94 kW
+  Erro              = 7.02%
+  k_eff             = 2.199569
+  C_eff             = 273.94 kW
+  R                 = 517.77 kW
+  R²                = 0.9863
+
+------------------------------------------------------------------------------
+Cenário: 20 | janela: ano | 8760 h
+  Potência real     = 294.62 kW
+  Potência estimada = 271.20 kW
+  Erro              = 7.95%
+  k_eff             = 2.184615
+  C_eff             = 271.20 kW
+  R                 = 522.59 kW
+  R²                = 0.9891
+
+------------------------------------------------------------------------------
+Cenário: 20_VV | janela: 1_mes | 744 h
+  Potência real     = 294.62 kW
+  Potência estimada = 271.37 kW
+  Erro              = 7.89%
+  k_eff             = 2.226543
+  C_eff             = 271.37 kW
+  R                 = 499.53 kW
+  R²                = 0.9816
+
+------------------------------------------------------------------------------
+Cenário: 20_VV | janela: 6_meses | 4344 h
+  Potência real     = 294.62 kW
+  Potência estimada = 274.68 kW
+  Erro              = 6.77%
+  k_eff             = 2.221402
+  C_eff             = 274.68 kW
+  R                 = 503.30 kW
+  R²                = 0.9858
+
+------------------------------------------------------------------------------
+Cenário: 20_VV | janela: ano | 8760 h
+  Potência real     = 294.62 kW
+  Potência estimada = 270.23 kW
+  Erro              = 8.28%
+  k_eff             = 2.202632
+  C_eff             = 270.23 kW
+  R                 = 509.38 kW
+  R²                = 0.9887
+
+------------------------------------------------------------------------------
+Cenário: 40 | janela: 1_mes | 744 h
+  Potência real     = 589.24 kW
+  Potência estimada = 560.03 kW
+  Erro              = 4.96%
+  k_eff             = 2.209285
+  C_eff             = 560.03 kW
+  R                 = 526.30 kW
+  R²                = 0.9778
+
+------------------------------------------------------------------------------
+Cenário: 40 | janela: 6_meses | 4344 h
+  Potência real     = 589.24 kW
+  Potência estimada = 566.33 kW
+  Erro              = 3.89%
+  k_eff             = 2.216004
+  C_eff             = 566.33 kW
+  R                 = 521.06 kW
+  R²                = 0.9827
+
+------------------------------------------------------------------------------
+Cenário: 40 | janela: ano | 8760 h
+  Potência real     = 589.24 kW
+  Potência estimada = 561.31 kW
+  Erro              = 4.74%
+  k_eff             = 2.196361
+  C_eff             = 561.31 kW
+  R                 = 526.96 kW
+  R²                = 0.9865
+
+------------------------------------------------------------------------------
+Cenário: 40_VV | janela: 1_mes | 744 h
+  Potência real     = 589.24 kW
+  Potência estimada = 570.52 kW
+  Erro              = 3.18%
+  k_eff             = 2.292507
+  C_eff             = 570.52 kW
+  R                 = 468.29 kW
+  R²                = 0.9754
+
+------------------------------------------------------------------------------
+Cenário: 40_VV | janela: 6_meses | 4344 h
+  Potência real     = 589.24 kW
+  Potência estimada = 571.64 kW
+  Erro              = 2.99%
+  k_eff             = 2.259308
+  C_eff             = 571.64 kW
+  R                 = 492.64 kW
+  R²                = 0.9811
+
+------------------------------------------------------------------------------
+Cenário: 40_VV | janela: ano | 8760 h
+  Potência real     = 589.24 kW
+  Potência estimada = 563.02 kW
+  Erro              = 4.45%
+  k_eff             = 2.231786
+  C_eff             = 563.02 kW
+  R                 = 501.50 kW
+  R²                = 0.9852
+
+------------------------------------------------------------------------------
+Cenário: 60 | janela: 1_mes | 744 h
+  Potência real     = 883.86 kW
+  Potência estimada = 822.64 kW
+  Erro              = 6.93%
+  k_eff             = 2.229528
+  C_eff             = 822.64 kW
+  R                 = 525.65 kW
+  R²                = 0.9747
+
+------------------------------------------------------------------------------
+Cenário: 60 | janela: 6_meses | 4344 h
+  Potência real     = 883.86 kW
+  Potência estimada = 829.76 kW
+  Erro              = 6.12%
+  k_eff             = 2.231551
+  C_eff             = 829.76 kW
+  R                 = 523.79 kW
+  R²                = 0.9792
+
+------------------------------------------------------------------------------
+Cenário: 60 | janela: ano | 8760 h
+  Potência real     = 883.86 kW
+  Potência estimada = 822.87 kW
+  Erro              = 6.90%
+  k_eff             = 2.207541
+  C_eff             = 822.87 kW
+  R                 = 530.72 kW
+  R²                = 0.9840
+
+------------------------------------------------------------------------------
+Cenário: 60_VV | janela: 1_mes | 744 h
+  Potência real     = 883.86 kW
+  Potência estimada = 862.65 kW
+  Erro              = 2.40%
+  k_eff             = 2.422387
+  C_eff             = 862.65 kW
+  R                 = 394.40 kW
+  R²                = 0.9701
+
+------------------------------------------------------------------------------
+Cenário: 60_VV | janela: 6_meses | 4344 h
+  Potência real     = 883.86 kW
+  Potência estimada = 848.17 kW
+  Erro              = 4.04%
+  k_eff             = 2.303158
+  C_eff             = 848.17 kW
+  R                 = 475.67 kW
+  R²                = 0.9747
+
+------------------------------------------------------------------------------
+Cenário: 60_VV | janela: ano | 8760 h
+  Potência real     = 883.86 kW
+  Potência estimada = 833.59 kW
+  Erro              = 5.69%
+  k_eff             = 2.265100
+  C_eff             = 833.59 kW
+  R                 = 489.43 kW
+  R²                = 0.9808
+
+==============================================================================
+CONCLUÍDO
+==============================================================================
+
+Planilha consolidada (FP=1 + Volt-VAr):
+  /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_09/modelo_de_Kara_2018/Resultados_Kara_PVWatts_FP1_VoltVar.xlsx
+
+CSV:
+  /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_09/modelo_de_Kara_2018/Resultados_Kara_PVWatts_FP1_VoltVar.csv
+
+Ambientes presentes na planilha:
+  FP=1      : 9 resultados
+  Volt-VAr  : 9 resultados
+
+Diagnósticos:
+  /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_09/modelo_de_Kara_2018/diagnostico_Kara_PVWatts
+
+Tempo de execução: 6.93 s
+==============================================================================
+STEP 4: Kara + PVWatts estimator
+Script: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_09/modelo_de_Kara_2018/estimador_Kara_PVWatts.py
+Started: 2026-09-17T13:42:03
+==============================================================================
+

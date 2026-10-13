@@ -1,0 +1,49 @@
+================================================================================
+PV ESTIMATION ANALYSIS
+================================================================================
+Optimal adjustment coefficient (k): 0.80
+Minimum mean estimation error     : 4.224%
+================================================================================
+
+BEST RESULTS FOR EACH PV PENETRATION SCENARIO
+====================================================================================================
+ PV Penetration (%)  Best Cluster Adjustment Coefficient (k) Actual PV Capacity (kW) Estimated PV Capacity (kW) Estimation Error (%) Accuracy (%)    RMSE     MAE      R²  Number of Equations
+                 20             1                       0.75                  294.62                     293.07                 0.53        99.47  81.503  63.921 0.83779               175890
+                 40             4                       0.80                  589.24                     581.78                 1.27        98.73 104.659  82.655 0.92976                10140
+                 60             2                       0.80                  883.86                     882.54                 0.15        99.85 147.756 113.721 0.84099                38038
+====================================================================================================
+
+COMPARISON — WITHOUT vs. WITH VOLT-VAR
+====================================================================================================
+ PV Penetration (%) Tipo - Without Volt-VAr  k - Without Volt-VAr  Best Cluster - Without Volt-VAr  Actual PV Capacity (kW)  Estimated PV Capacity - Without Volt-VAr (kW)  Alpha 1 - Without Volt-VAr  Alpha 2 - Without Volt-VAr  Variância Pinst - Without Volt-VAr  Desvio padrão Pinst - Without Volt-VAr  Cov(alpha1, alpha1) - Without Volt-VAr  Cov(alpha1, alpha2) - Without Volt-VAr  Cov(alpha2, alpha1) - Without Volt-VAr  Cov(alpha2, alpha2) - Without Volt-VAr  Sigma² - Without Volt-VAr  Error - Without Volt-VAr (%)  Accuracy - Without Volt-VAr (%)  RMSE - Without Volt-VAr  MAE - Without Volt-VAr  R² - Without Volt-VAr  Equações - Without Volt-VAr  Graus de liberdade - Without Volt-VAr  Posto A - Without Volt-VAr Condição - Without Volt-VAr Tipo - With Volt-VAr  k - With Volt-VAr  Best Cluster - With Volt-VAr  Potência Real (kW) - With Volt-VAr  Estimated PV Capacity - With Volt-VAr (kW)  Alpha 1 - With Volt-VAr  Alpha 2 - With Volt-VAr  Variância Pinst - With Volt-VAr  Desvio padrão Pinst - With Volt-VAr  Cov(alpha1, alpha1) - With Volt-VAr  Cov(alpha1, alpha2) - With Volt-VAr  Cov(alpha2, alpha1) - With Volt-VAr  Cov(alpha2, alpha2) - With Volt-VAr  Sigma² - With Volt-VAr  Error - With Volt-VAr (%)  Accuracy - With Volt-VAr (%)  RMSE - With Volt-VAr  MAE - With Volt-VAr  R² - With Volt-VAr  Equações - With Volt-VAr  Graus de liberdade - With Volt-VAr  Posto A - With Volt-VAr Condição - With Volt-VAr  Diferença de erro (p.p.)  Diferença de acerto (p.p.)  Variação relativa do erro (%)
+                 20                     FP1                   0.8                                3                  294.620                                     291.906335                    2.159794                  291.906335                            1.254365                                1.119984                                0.000010                                0.000205                                0.000205                                1.254365                3920.113464                      0.921073                        99.078927                62.609359               48.853430               0.924319                        43173                                  43171                           2            Without Volt-VAr                   VV               0.75                             1                             294.620                                  293.065337                 1.894083               293.065337                         0.720334                             0.848725                             0.000004                             0.000297                             0.000297                             0.720334             6642.765464                   0.527684                     99.472316             81.502699            63.921307            0.837787                    175890                              175888                        2            With Volt-VAr                 -0.393389                    0.393389                     -42.709846
+                 40                     FP1                   0.8                                4                  589.240                                     599.091812                    1.983910                  599.091812                            6.161653                                2.482268                                0.000020                               -0.000623                               -0.000623                                6.161653               12681.216286                      1.671952                        98.328048               112.607946               88.227548               0.876764                        38038                                  38036                           2            Without Volt-VAr                   VV               0.80                             4                             589.240                                  581.783494                 1.991835               581.783494                        46.589512                             6.825651                             0.000030                             0.008174                             0.008174                            46.589512            10955.598989                   1.265445                     98.734555            104.658674            82.654957            0.929764                     10140                               10138                        2            With Volt-VAr                 -0.406508                    0.406508                     -24.313360
+                 60                     FP1                   0.8                                4                  883.859                                     877.438189                    1.991250                  877.438189                           10.433035                                3.230021                                0.000033                               -0.001416                               -0.001416                               10.433035               21417.127736                      0.726452                        99.273548               146.342071              112.796529               0.844023                        38038                                  38036                           2            Without Volt-VAr                   VV               0.80                             2                             883.859                                  882.540328                 2.017626               882.540328                        10.628757                             3.260177                             0.000035                            -0.001383                            -0.001383                            10.628757            21832.999814                   0.149195                     99.850805            147.756055           113.721142            0.840987                     38038                               38036                        2            With Volt-VAr                 -0.577257                    0.577257                     -79.462539
+====================================================================================================
+Mean error without Volt-VAr: 1.106%
+Mean error with Volt-VAr   : 0.647%
+Mean difference (with - without): -0.459 percentage points
+
+Analysis files saved to:
+/home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_07/estimador_PV/analysis_results
+
+Generated files:
+  - Accuracy_vs_k.png
+  - Analysis_Summary.txt
+  - Best_Estimation_Results.csv
+  - Best_Estimation_Results.tex
+  - Best_Estimation_Results.xlsx
+  - Comparison_Accuracy_Without_vs_With_VoltVar.png
+  - Comparison_Error_Without_vs_With_VoltVar.png
+  - Comparison_FP1_vs_VoltVar.csv
+  - Comparison_FP1_vs_VoltVar.xlsx
+  - Comparison_Summary.txt
+  - Error_vs_k.png
+  - EstimatedPower_vs_k.png
+  - MeanError_vs_k.png
+==============================================================================
+STEP 6: Result analysis
+Script: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_07/estimador_PV/analisar_resultados.py
+Started: 2026-09-17T03:16:33
+==============================================================================
+

@@ -1,0 +1,46 @@
+// This is the OpenDSS Master file to solve the test system time-series power flow using loadshapes.
+
+Clear
+New Circuit.240_bus_test_system   ! Initiate a new circuit
+
+
+! ELEMENTOS DO SISTEMA
+!--------------------------------------------------------!
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/elementos_dss/Vsource.dss"                     ! Source definition
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/elementos_dss/SubTransformer.dss"              ! Substation transformer definition
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/elementos_dss/RegControl.dss"                  ! Tap changer control definition
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/elementos_dss/DistriTransformer.dss"           ! Secondary distribution transformer definition
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/elementos_dss/Linecode.dss"                    ! Line configuration
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/elementos_dss/Line.dss"                        ! Line segment definition
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/elementos_dss/CircuitBreaker.dss"              ! Circuit breaker definition
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/elementos_dss/Capacitor.dss"                   ! Shunt capacitor bank definition
+
+
+
+! ==============================
+! LOADSHAPES
+! ==============================
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/Loadshapes_FeederA.dss"
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/Loadshapes_FeederB.dss"
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/Loadshapes_FeederC.dss"
+
+
+
+! ==============================
+! LOADS
+! ==============================
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/Loads_FeederA.dss"
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/Loads_FeederB.dss"
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/Loads_FeederC.dss"
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/Loadshapes_FeederA.dss"
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/Loadshapes_FeederB.dss"
+Redirect "/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/Loadshapes_FeederC.dss"
+
+
+
+!--------------------------Calculate---------------------!
+Set VoltageBases = "69.0, 13.8, 0.208"
+CalcVoltageBases
+solve
+BusCoords "/home/matheus/Documentos/BtM-PV-estimating/elementos_dss/Buscoords.dss"
+

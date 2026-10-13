@@ -1,0 +1,143 @@
+
+Carga média diurna sem PV = 1473.10 kW
+
+Salvando potências dos cenários
+Arquivo salvo: Potencias_Cenarios.xlsx
+
+Registros de LoadShape encontrados: 193 buses físicos elegíveis após agregação
+
+CARACTERIZAÇÃO DOS FEEDERS:
+  Feeder A: 15 loads | 432.63 kW | mono=2 | bi=6 | tri=7
+  Feeder B: 44 loads | 1754.80 kW | mono=0 | bi=26 | tri=18
+  Feeder C: 134 loads | 3532.03 kW | mono=0 | bi=106 | tri=28
+
+CENÁRIO COM 20.00 % DE PENETRAÇÃO
+Potência alvo       : 294.62 kW
+Potência inserida    : 295.00 kW (100.13%)
+Quantidade de PVs   : 28
+
+QUOTAS DE PVs POR FEEDER:
+  Feeder A: 2 PVs (peso=7.67%)
+  Feeder B: 8 PVs (peso=26.74%)
+  Feeder C: 18 PVs (peso=65.59%)
+
+PREFERÊNCIA DE FASES POR FEEDER:
+  Feeder A: mono=13.3% | bi=40.0% | tri=46.7% (loads: mono=2 | bi=6 | tri=7)
+  Feeder B: mono=0.0% | bi=59.1% | tri=40.9% (loads: mono=0 | bi=26 | tri=18)
+  Feeder C: mono=0.0% | bi=79.1% | tri=20.9% (loads: mono=0 | bi=106 | tri=28)
+AVISO: quota do Feeder C já atingida; PV_20 (3.0 kW) será alocado por capacidade.
+
+VALIDAÇÃO FINAL PV/LOAD: OK — nenhum barramento ultrapassa 40.0% de PV acumulado.
+
+CAPACIDADE DE ALOCAÇÃO: OK
+  Solicitada : 295.00 kW
+  Distribuída: 295.00 kW
+
+DISTRIBUIÇÃO FINAL POR FEEDER:
+  Feeder A: 1 PVs | 5.00 kW | mono=0 | bi=0 | tri=1
+  Feeder B: 8 PVs | 110.00 kW | mono=0 | bi=1 | tri=7
+  Feeder C: 19 PVs | 180.00 kW | mono=0 | bi=12 | tri=7
+
+CENÁRIO COM 40.00 % DE PENETRAÇÃO
+Potência alvo       : 589.24 kW
+Potência inserida    : 588.00 kW (99.79%)
+Quantidade de PVs   : 54
+
+QUOTAS DE PVs POR FEEDER:
+  Feeder A: 4 PVs (peso=7.67%)
+  Feeder B: 15 PVs (peso=26.74%)
+  Feeder C: 35 PVs (peso=65.59%)
+
+PREFERÊNCIA DE FASES POR FEEDER:
+  Feeder A: mono=13.3% | bi=40.0% | tri=46.7% (loads: mono=2 | bi=6 | tri=7)
+  Feeder B: mono=0.0% | bi=59.1% | tri=40.9% (loads: mono=0 | bi=26 | tri=18)
+  Feeder C: mono=0.0% | bi=79.1% | tri=20.9% (loads: mono=0 | bi=106 | tri=28)
+
+VALIDAÇÃO FINAL PV/LOAD: OK — nenhum barramento ultrapassa 40.0% de PV acumulado.
+
+CAPACIDADE DE ALOCAÇÃO: OK
+  Solicitada : 588.00 kW
+  Distribuída: 588.00 kW
+
+DISTRIBUIÇÃO FINAL POR FEEDER:
+  Feeder A: 4 PVs | 36.00 kW | mono=0 | bi=1 | tri=3
+  Feeder B: 15 PVs | 275.00 kW | mono=0 | bi=0 | tri=15
+  Feeder C: 35 PVs | 277.00 kW | mono=0 | bi=24 | tri=11
+
+CENÁRIO COM 60.00 % DE PENETRAÇÃO
+Potência alvo       : 883.86 kW
+Potência inserida    : 882.00 kW (99.79%)
+Quantidade de PVs   : 99
+
+QUOTAS DE PVs POR FEEDER:
+  Feeder A: 8 PVs (peso=7.67%)
+  Feeder B: 26 PVs (peso=26.74%)
+  Feeder C: 65 PVs (peso=65.59%)
+
+PREFERÊNCIA DE FASES POR FEEDER:
+  Feeder A: mono=13.3% | bi=40.0% | tri=46.7% (loads: mono=2 | bi=6 | tri=7)
+  Feeder B: mono=0.0% | bi=59.1% | tri=40.9% (loads: mono=0 | bi=26 | tri=18)
+  Feeder C: mono=0.0% | bi=79.1% | tri=20.9% (loads: mono=0 | bi=106 | tri=28)
+AVISO: quota do Feeder C já atingida; PV_65 (3.0 kW) será alocado por capacidade.
+AVISO: quota do Feeder C já atingida; PV_73 (3.0 kW) será alocado por capacidade.
+AVISO: quota do Feeder C já atingida; PV_83 (3.0 kW) será alocado por capacidade.
+AVISO: quota do Feeder C já atingida; PV_85 (3.0 kW) será alocado por capacidade.
+
+VALIDAÇÃO FINAL PV/LOAD: OK — nenhum barramento ultrapassa 40.0% de PV acumulado.
+
+CAPACIDADE DE ALOCAÇÃO: OK
+  Solicitada : 882.00 kW
+  Distribuída: 882.00 kW
+
+DISTRIBUIÇÃO FINAL POR FEEDER:
+  Feeder A: 4 PVs | 36.00 kW | mono=0 | bi=0 | tri=4
+  Feeder B: 26 PVs | 360.00 kW | mono=0 | bi=1 | tri=25
+  Feeder C: 69 PVs | 486.00 kW | mono=0 | bi=47 | tri=22
+
+Gerado geradoresPV_20.dss.
+
+Gerado PV_Master20.dss.
+
+Gerado geradoresPV_20_VV.dss.
+
+Gerado PV_Master20_VV.dss.
+Figure(1200x600)
+Figure(800x600)
+
+Gerado geradoresPV_40.dss.
+
+Gerado PV_Master40.dss.
+
+Gerado geradoresPV_40_VV.dss.
+
+Gerado PV_Master40_VV.dss.
+Figure(1200x600)
+Figure(800x600)
+
+Gerado geradoresPV_60.dss.
+
+Gerado PV_Master60.dss.
+
+Gerado geradoresPV_60_VV.dss.
+
+Gerado PV_Master60_VV.dss.
+Figure(1200x600)
+Figure(800x600)
+
+
+   Penetracao  Potencia  Numero_PVs
+0        20.0     295.0          28
+1        40.0     588.0          54
+2        60.0     882.0          99
+Figure(1200x600)
+Figure(800x600)
+Figure(1000x500)
+Figure(1000x600)
+
+PROCESSAMENTO CONCLUÍDO
+==============================================================================
+STEP 1: Scenario builder
+Script: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes_Kara_PVWatts/execucao_03/scripts/construtor-de-cenarios/construtor_de_cenarios_VoltVar_IEEE1547.py
+Started: 2026-09-17T13:10:20
+==============================================================================
+

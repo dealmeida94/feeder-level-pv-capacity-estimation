@@ -1,0 +1,406 @@
+* Ordem de execução
+** Etapa de pré-processamento
+1. =processa_medicoes.py=
+   2. =gera_loadshapes.py=
+      3. =extrai_dados_Loaddss_original.py=
+	 4. =gera_arquivo_Load_dss.py=
+	    5. =gera_master_dss.py=
+	       6. =processa_dados_climaticos.py= 
+
+
+** Construtor de cenários
+1. =construtor_de_cenarios.py=
+
+** Execução
+1. =executa_simulacao.py=
+
+* Descrição dos scripts
+
+** =processa_medicoes.py=
+
+Processa os dados originais disponibilizados por Bu et al., garantindo
+a formatação das datas no padrão datetime,e as medições para tipo numérico.
+Além disso, realiza verificações nos dataframes em busca de
+inconsistências.
+
+Os dados correspondem a uma rede de distribuição real composta por
+3 alimentadores, aos quais estão conectados 1120 consumidores. Todos
+os consumidores são equipados com smart meters que registram o consumo
+horário de energia (kWh). O conjunto de dados disponibilizado contempla
+1 ano de medições.
+
+Para preservação da privacidade dos consumidores, as medições dos smart
+meters são agregadas no nível secundário dos transformadores de distribuição,
+
+formando nós (buses). Ao todo, o sistema é composto por 240 nós.
+A potência reativa da rede foi determinada por meio da atribuição de
+fatores de potência aleatórios aos nós (buses), no intervalo de 0,90 a
+0,95. A metodologia de cálculo utilizada está descrita na planilha de dados disponibilizada pelos autores.
+
+
+Referência:
+F. Bu, Y. Yuan, Z. Wang, K. Dehghanpour, and A. Kimber, "A Time-series Distribution Test System based on Real
+Utility Data." 2019 North American Power Symposium (NAPS), Wichita, KS, USA, 2019, pp. 1-6.
+<https://wzy.ece.iastate.edu/Testsystem.html>
+
+ENTRADA:
+	+ arquivo "Calculated Nodal P&Q.xlsx" : arquivo original disponibilizado pelos autores.
+
+SAÍDAS:
+	+ arquivo "Nodal_PQ_processado.xlsx" : dados após processamento;
+	+ arquivo "log_processamento_Nodal_PQ.txt" : relatório das verificações;
+	+ figuras:
+	  - FP_1DIA_FeederA.png : Plot do Fator de Potência ao longo de 1 dia no Feeder A.
+	  - FP_1DIA_FeederB.png : Plot do Fator de Potência ao longo de 1 dia no Feeder B.
+	  - FP_1DIA_FeederC.png : Plot do Fator de Potência ao longo de 1 dia no Feeder C.
+	  - FP_1DIA_subestacao.png : Plot do Fator de Potência ao longo de 1 dia na subestação.
+	  - FP_total_FeederA.png : Plot do Fator de Potência do Feeder A ao longo de todo o período disponível.
+	  - FP_total_FeederB.png : Plot do Fator de Potência do Feeder B ao longo de todo o período disponível.
+	  - FP_total_FeederC.png : Plot do Fator de Potência do Feeder C ao longo de todo o período disponível.
+	  - FP_total _subestacao.png : Plot do Fator de Potência na subestação ao longo de todo o período disponível.
+	  - potencia_1DIA_FeederA : Plot das potências ativa e reativa ao longo de 1 dia no Feeder A.
+	  - potencia_1DIA_FeederB : Plot das potências ativa e reativa ao longo de 1 dia no Feeder B.
+	  - potencia_1DIA_FeederC : Plot das potências ativa e reativa ao longo de 1 dia no Feeder C.
+	  - potencia_1DIA_subestacao : Plot das potências ativa e reativa ao longo de 1 dia na subestação.
+	  - potencia_total_FeederA.png : Plot das potências ativa e reativa do Feeder A ao longo de todo o período disponível.
+	  - potencia_total_FeederB.png : Plot das potências ativa e reativa do Feeder B ao longo de todo o período disponível.
+	  - potencia_total_FeederC.png : Plot das potências ativa e reativa do Feeder C ao longo de todo o período disponível.
+	  - potencia_total_subestacao.png : Plot das potências ativa e reativa na subestação ao longo de todo o período disponível.
+
+
+	
+** =gera_loadshapes.py=
+
+Realiza uma leitura da planilha 'Nodal_P&Q_processados.xlsx' e gera os arquivos .txt contendo os loadshapes de potência ativa em p.u (normalizados por unidade) por bus, e também os arquivos loadshapes.dss
+que criam as cargas no OpenDss e apontam para os .txt
+
+Etapas do processo:
+	1. Leitura dos dados
+	2. Eliminação das cargas nulas
+	3. Para cada bus, estabelece o valor máximo da série como potência de base
+	4. Realiza a normalização da série
+	5. Salva a série normalizada (loadshapes) em arquivos .txt, sendo um para cada bus
+	6. Gera o arquivo Loadshapes.dss para cada Feeder
+	7. Salva os valores de base adotados em uma planilha para possibilitar a conferencia.
+
+
+INPUTS:
+	+ planilha 'Nodal_PQ_processados.xlsx'
+
+
+OUTPUTS:
+	+ arquivos .txt com o loadshape de cada bus. Padrão do nome do arquivo: FeederX_Bus_xxxx.txt | Ex.: FeederA_Bus_1003.txt
+	  (arquivos são separados por Feeder)
+	+ arquivo Loadshapes.dss para cada Feeder. Padrão do nome do arquivo: Loadshapes_FeederX | Ex.: Loadshapes_FeederA.dss
+	+ arquivo .csv contendo os valores de base adotados. Padrão do nome do arquivo: Valores_de_Base_FeederX.csv | Ex.: Valores_de_Base_FeederA.csv
+	+ relatório: log_gera_loadshapes.txt
+	  
+
+** =extrai_dados_Loaddss_original.py=
+
+O arquivo Load.dss original considera cargas estática e, portanto, é necessario a crição
+de um novo arquivo Load.dss que considere os loadshapes das cargas.
+
+Para isso, é preciso conhecer o as configurações (nome, numero de fases e tipo de conexão)
+de cada carga.
+
+Para tal, o script realiza a leitura linha a linha do arquivo "Load.dss" original e, por meiod
+de buscas de padrões de texto (expressões regulares/regex) identifica as configurações de cada
+carga e salva-as em uma arquivo .xlsx.
+
+INPUTS:
+	+ Arquivo Load.dss original: 'Load_Original.dss'
+
+OUTPUT:
+	+ Arquivo de configurações dos loads: 'configs_do_load.xlsx'
+
+
+** =gera_arquivo_Load_dss.py=
+Gera três arquivos Load.dss, sendo um para cada Feeder, com base nas configurações extraídas
+para cada feeder, nos loadshapes e valores de base definidos durante a construção dos loadshapes.
+
+INPUTS:
+    - planilha .xlsx contendo as configurações do feeder;
+    - planilha .csv contendo os valores de base adotados;
+    - arquivos loadshapes.dss.
+
+OUTPUTS:
+    - Arquivos Load.dss por feeder;
+    - Relatório com inconsistências em .xlsx.
+
+
+** =gera_master_dss.py=
+Tendo por base o arquivo Master.dss original, produz um novo arquivo Master
+considerando os loadshapes gerados para cada load.
+
+O script realiza uma varredura nos diretórios apontados, verifica a existência dos arquivos .dss que descrevem os
+diversos elementos que compõem o sistema, e gera os "Redirects"
+
++ INPUTS:
+  - endereços para diretório que contém os elementos do sistema;
+  - endereços para diretório contendo loads e loadshapes
+
++ OUTPUTS:
+  - arquivo "Master_sem_PV.dss"
+  - relatório.
+
+
+
+** =executa_simulacao.py=
+Executa a simulação do sistema de distribuição no OpenDSS utilizando o arquivo ="Master_sem_PV.dss"= gerado na ultima etapa do préprocessamento.
+
+A cada passo de simulação, cada carga recebe um fator de potência (FP) aleatório, dentro de um intervalo limite pré-definido, e então o
+fluxo de potência é resolvido.
+
+Ao fim, os resultados são armazenados em arquivos .parquet.
+
++ INPUTS:
+  - arquivo ="Master_sem_PV.dss"=
+
+
++ OUTPUTS:
+  - Arquivo ="resultados_sem_PV.parquet"=
+  - Gráficos:
+    > Potência ativa e reativa na subestação : ="PeQ_subestacao_baseload.png"=
+    > Fator de Potência na subestação : = ="FP_subestacao_baseload.png"=
+    > Tensões mínimas e máximas em pu na subestação : ="V_subestacao_baseload.png"=
+
+
+** =processa_dados_climaticos.py=
+Realiza o processamento das medições de radiação solar e temperatura
+fornecidas pelas estação do INMET A853 (Cruz Alta/RS).
+
+O processamento é dividido nas seguintes etapas:
+    - Leitura do dados;
+    - Conversão de radiação para irradiância;
+    - Inputação de dados faltantes;
+    - Cálculo astronômico do nascer e pôr do sol;
+    - Clusterização das curvas diárias;
+    - Calculos estatísticos;
+    - Plotagens de gráficos;
+    - Salva relatório do processamento.
+    
+INPUTS:
+    + Tabela fornecida pelo site do INMET
+    
+OUTPUTS:
+    + Arquivo .xlsx contendo os dados processados
+    + Figuras .png contendo os plots
+    + Arquivo .txt com relatório do processamento
+
+
+** =construtor_de_cenarios.py=
+O script gera diferentes cenários de penetração de PV, a partir dos loadshapes
+declarados na simulação de base (sem PV).
+
+A potência dos geradores PV inseridos na simulação é determinada por uma lista
+contendo os percentuais em forma decimal. Ex.: [0.2, 0.3, 0.4]
+
+A distribuição dos sistemas PV é proporcional à potência das cargas conectadas em cada bus.
+
+A potência PV instalada em cada bus é limitada a um percentual máximo da potência do bus,
+para evitar concentrações excessivas de geração.
+
+Os sistemas PV gerados possuem potência máxima de 5 kW unidade.
+
+O processo consiste nas seguintes etapas:
+    
+    1. Leitura da curva de potência ativa do barramento da subestação, sem PV.
+    
+    2. Calculo da carga média diurna sem PV da subestação.
+    
+    3. Determinação da potência total de geração PV;
+    
+    4. Leitura dos arquivos Load.dss para identificação dos buses e da potência em cada bus.
+    
+    5. Distribuição da potência PV total de modo proporcional entre os buses.
+       (a potência em cada nó não deve ser superior a um percentual predefinido, e 
+        cada PV não deve ser maior que 5 kW)
+    
+    6. Construir um arquivo 'geradoresPV_XX.dss' contendo os geradores PV distribuidos.
+    
+    7. Constroi um arquivo .xlsx contendo a distribuição PV.
+    
+    8. Constroi um arquivo de relatório do processamento.
+    
+ENTRADAS:
+    + Lista contendo os percentuais de penetração PV desejado
+    + Resultados da simulação base {resultados_sem_PV.parquet}
+    + Arquivos Loadshapes.dss {Loadshapes_FeederA,
+                               Loadshapes_FeederB,
+                               Loadshapes_FeederC}
+    
+SAÍDAS:
+    + Para cada cenário:
+        geradoresPV_XX.dss
+        geradoresPV_XX.xlsx
+        ( XX é o nível de penetração)
+        
+    + Relatório de processamento log_contrucao_cenarios.txt
+
+
+
+    
+    
+* Guia Inputs e Outputs das funções
+
+** processa_medicoes.py
+
+| Função               | Inputs                      | Outputs                          |
+|----------------------+-----------------------------+----------------------------------|
+| processa_medicoes.py | "Calculated Nodal P&Q.xlsx" | "Nodal_PQ_processado.xlsx"       |
+|                      |                             | "log_processamento_Nodal_PQ.txt" |
+|                      |                             | Figuras(plots)                   |
+	
+
+** gera_loadshapes.py
+| Função             | Inputs                     | Outputs                     |
+|--------------------+----------------------------+-----------------------------|
+| gera_loadshapes.py | 'Nodal_PQ_processado.xlsx' | FeederX_Bus_xxxx.txt        |
+|                    |                            | Loadshapes_FeederX.dss      |
+|                    |                            | Valores_de_Base_FeederX.csv |
+|                    |                            | log_gera_loadshapes.txt     |
+
+** extrai_dados_Loaddss_original.py
+| Função                           | Inputs              | Outputs                |
+|----------------------------------+---------------------+------------------------|
+| extrai_dados_Loaddss_original.py | "Load_Original.dss" | "configs_do_load.xlsx" |
+
+** gera_arquivo_Load_dss.py
+
+| Função                   | Inputs                                | Outputs                         |
+|--------------------------+---------------------------------------+---------------------------------|
+| gera_arquivo_Load_dss.py | 'configs_do_load.xlsx'                | 'Loads_Feeder{nome feeder}.dss' |
+|                          | 'Valores_de_Base_Feeder{nome feeder}' | 'log_gera_load_dss.xlsx'        |
+|                          | 'Loadshapes_Feeder{nome feeder}'      |                                 |
+
+** gera_master_dss.py
+
+| Função             | Inputs                   | Outputs                   |
+|--------------------+--------------------------+---------------------------|
+| gera_master_dss.py | endereços:               | 'Master_sem_PV.dss'       |
+|                    | diretórios com elementos | 'logs_gera_Masterdss.txt' |
+|                    | diretório com loads      |                           |
+|                    | diretório com loadshapes |                           |
+
+** =executa_simulacao.py=
+
+| Função                | Inputs                | Outputs                        |                                 |
+|-----------------------+-----------------------+--------------------------------+---------------------------------|
+| =executa_simulacao.py | ="Master_sem_PV.dss"= | 'resultados_sem_PV.parquet'    |                                 |
+|                       |                       | 'logs_gera_Masterdss.txt'      | ="PeQ_subestacao_baseload.png"= |
+|                       |                       | ="FP_subestacao_baseload.png"= |                                 |
+|                       |                       |                                | ="V_subestacao_baseload.png"=   |
+|                       |                       |                                |                                 |
+
+** =processa_dados_climaticos.py=
+| Função                         | Inputs                             | Outputs                                   |
+|--------------------------------+------------------------------------+-------------------------------------------|
+| =processa_dados_climaticos.py= | =estacao_INMET_A853_cruz_alta.csv= | "Dados_climaticos_processados.xlsx"       |
+|                                |                                    | Plots                                     |
+|                                |                                    | "logs_processamento-dados-climaticos.txt" |
+|                                |                                    |                                           |
+'
+** =construtor_de_cenarios.py=
+| Função                   | Inputs                           | Outputs                     |
+|--------------------------+----------------------------------+-----------------------------|
+| =construtor_de_cenarios= | percentual_de_PVs (lista python) | geradoresPV_XX.dss          |
+|                          | resultados_se_PV.parquet         | geradoresPV_XX.xlsx         |
+|                          | Loadshapes_FeederA.dss           | log_construcao_cenarios.txt |
+|                          | Loadshapes_FeederB.dss           |                             |
+|                          | Loadshapes_FeederC.dss           |                             |
+
+* Estrutura de diretórios
+
+#+BEGIN_SRC
+
+BtM-PV-estimation/
+│
+├── dados/
+│   ├── externos/
+│   │   ├── Calculated Nodal P&Q.xlsx
+│   │   ├── estacao_INMET_A853_cruz_alta.csv
+│   │   ├── Load_Original.dss
+│   │   ├── Master_Original.dss
+│   │
+│   │
+│   ├── inputs/
+│   │   ├── carga_base/  
+            ├── FeederA/
+                └── FeederX_Bus_xxxx.txt
+  
+            ├── FeederB/
+                └── FeederX_Bus_xxxx.txt
+
+            ├── FeederC/
+                └── FeederX_Bus_xxxx.txt
+
+            ├── Loads_FeederA.dss
+            ├── Loads_FeederB.dss
+            ├── Loads_FeederC.dss
+            ├── Loadshapes_FeederA.dss
+            ├── Loadshapes_FeederB.dss
+            ├── Loadshapes_FeederC.dss
+            ├── Valores_de_Base_FeederA.csv
+            ├── Valores_de_Base_FeederB.csv
+            ├── Valores_de_Base_FeederC.csv
+                
+│   ├── intermediarios/  
+│   │   ├── Nodal_PQ_processado.xlsx
+│   │   ├── configs_do_load.xlsx
+
+├── documentacao/
+  
+  
+├── figuras/
+    ├── pre-processament
+        ├── pre-processamento
+            ├── FP_1DIA_FeederA.png
+	    ├── FP_1DIA_FeederB.png
+	    ├── FP_1DIA_FeederC.png
+	    ├── FP_1DIA_subestacao.png
+	    ├── FP_total_FeederA.png 
+	    ├── FP_total_FeederB.png
+	    ├── FP_total_FeederC.png
+	    ├── FP_total _subestacao.png 
+	    ├── potencia_1DIA_FeederA
+	    ├── potencia_1DIA_FeederB
+	    ├── potencia_1DIA_FeederC
+	    ├── potencia_1DIA_subestacao
+	    ├── potencia_total_FeederA.png 
+	    ├── potencia_total_FeederB.png
+	    ├── potencia_total_FeederC.png
+	    ├── potencia_total_subestacao.png 
+
+
+
+├── logs/
+    ├── log_gera_load_dss.xlsx
+    ├── log_processamento_Nodal_PQ.txt
+    ├── log_gera_loadshapes.txt
+
+  
+├── __pycache__/
+
+├── README.md  
+  
+├── scripts/  
+  
+#+END_SRC
+
+
+
+├──
+
+├──
+│
+└──
+
+* Dependências
+
++ pandas
++ numpy
++ matplotlib
++ astral
++ sklearn
+

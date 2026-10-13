@@ -1,0 +1,367 @@
+[H[2J
+======================================================================
+LOCALIZAÇÃO DOS RESULTADOS DAS SIMULAÇÕES
+======================================================================
+
+Foram encontrados 7 arquivos:
+  [FP1    ]   0% -> resultados0.parquet
+  [FP1    ]  20% -> resultados20.parquet
+  [FP1    ]  40% -> resultados40.parquet
+  [FP1    ]  60% -> resultados60.parquet
+  [VoltVar]  20% -> resultados20_VV.parquet
+  [VoltVar]  40% -> resultados40_VV.parquet
+  [VoltVar]  60% -> resultados60_VV.parquet
+----------------------------------------------------------------------
+
+Validação dos cenários
+  FP1: ['0', '20', '40', '60']
+  VoltVar: ['20', '40', '60']
+----------------------------------------------------------------------
+
+Leitura dos resultados
+
+FP1 - Cenário 0%
+   Registros carregados: 8760
+FP1 - Cenário 20%
+   Registros carregados: 8760
+FP1 - Cenário 40%
+   Registros carregados: 8760
+FP1 - Cenário 60%
+   Registros carregados: 8760
+VoltVar - Cenário 20%
+   Registros carregados: 8760
+VoltVar - Cenário 40%
+   Registros carregados: 8760
+VoltVar - Cenário 60%
+   Registros carregados: 8760
+
+Foram carregados 7 cenários.
+----------------------------------------------------------------------
+
+Leitura dos dados climáticos
+
+Foram carregados 8760 registros.
+----------------------------------------------------------------------
+
+Filtrando período entre 06:00 e 18:00...
+
+Registros climáticos após filtragem: 4745
+----------------------------------------------------------------------
+
+Organizando os cenários...
+
+FP1 - 0%
+ Dias encontrados : 365
+ Registros        : 4745
+FP1 - 20%
+ Dias encontrados : 365
+ Registros        : 4745
+FP1 - 40%
+ Dias encontrados : 365
+ Registros        : 4745
+FP1 - 60%
+ Dias encontrados : 365
+ Registros        : 4745
+VoltVar - 20%
+ Dias encontrados : 365
+ Registros        : 4745
+VoltVar - 40%
+ Dias encontrados : 365
+ Registros        : 4745
+VoltVar - 60%
+ Dias encontrados : 365
+ Registros        : 4745
+----------------------------------------------------------------------
+
+Organizando curvas diárias de Q_kvar
+
+FP1 - 0%: 365 dias x 13 horas
+FP1 - 20%: 365 dias x 13 horas
+FP1 - 40%: 365 dias x 13 horas
+FP1 - 60%: 365 dias x 13 horas
+VoltVar - 20%: 365 dias x 13 horas
+VoltVar - 40%: 365 dias x 13 horas
+VoltVar - 60%: 365 dias x 13 horas
+----------------------------------------------------------------------
+
+Iniciando clusterização...
+
+FP1 - Cenário 0%...
+   Foram encontrados 4 clusters.
+   Inércia: 31151219.99
+FP1 - Cenário 20%...
+   Foram encontrados 4 clusters.
+   Inércia: 30679061.34
+FP1 - Cenário 40%...
+   Foram encontrados 4 clusters.
+   Inércia: 30323731.69
+FP1 - Cenário 60%...
+   Foram encontrados 4 clusters.
+   Inércia: 30005842.97
+VoltVar - Cenário 20%...
+   Foram encontrados 4 clusters.
+   Inércia: 30398636.62
+VoltVar - Cenário 40%...
+   Foram encontrados 4 clusters.
+   Inércia: 29743760.57
+VoltVar - Cenário 60%...
+   Foram encontrados 4 clusters.
+   Inércia: 28970941.01
+----------------------------------------------------------------------
+
+Gerando gráficos dos clusters...
+
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+Figure(1000x600)
+
+Figuras salvas nas pastas correspondentes.
+----------------------------------------------------------------------
+
+Potência reativa média de cada cluster
+
+Condição: FP1 | Nível PV: 0%
+
+  Cluster 1: Média = 361.48 kvar | Mín = 158.86 kvar | Máx = 618.55 kvar | 84 dias
+
+  Cluster 2: Média = 864.48 kvar | Mín = 270.92 kvar | Máx = 1369.18 kvar | 39 dias
+
+  Cluster 3: Média = 645.46 kvar | Mín = 249.41 kvar | Máx = 1090.45 kvar | 78 dias
+
+  Cluster 4: Média = 501.43 kvar | Mín = 238.90 kvar | Máx = 766.78 kvar | 164 dias
+Condição: FP1 | Nível PV: 20%
+
+  Cluster 1: Média = 496.50 kvar | Mín = 238.90 kvar | Máx = 755.31 kvar | 165 dias
+
+  Cluster 2: Média = 860.91 kvar | Mín = 270.92 kvar | Máx = 1360.93 kvar | 39 dias
+
+  Cluster 3: Média = 358.32 kvar | Mín = 158.86 kvar | Máx = 618.55 kvar | 83 dias
+
+  Cluster 4: Média = 640.71 kvar | Mín = 249.41 kvar | Máx = 1079.56 kvar | 78 dias
+Condição: FP1 | Nível PV: 40%
+
+  Cluster 1: Média = 492.84 kvar | Mín = 238.90 kvar | Máx = 745.92 kvar | 165 dias
+
+  Cluster 2: Média = 857.59 kvar | Mín = 270.92 kvar | Máx = 1352.12 kvar | 39 dias
+
+  Cluster 3: Média = 636.65 kvar | Mín = 249.41 kvar | Máx = 1070.15 kvar | 78 dias
+
+  Cluster 4: Média = 356.13 kvar | Mín = 156.56 kvar | Máx = 618.55 kvar | 83 dias
+Condição: FP1 | Nível PV: 60%
+
+  Cluster 1: Média = 489.63 kvar | Mín = 238.90 kvar | Máx = 737.05 kvar | 165 dias
+
+  Cluster 2: Média = 854.16 kvar | Mín = 270.92 kvar | Máx = 1350.69 kvar | 39 dias
+
+  Cluster 3: Média = 354.51 kvar | Mín = 154.78 kvar | Máx = 618.55 kvar | 83 dias
+
+  Cluster 4: Média = 632.93 kvar | Mín = 249.41 kvar | Máx = 1060.42 kvar | 78 dias
+Condição: VoltVar | Nível PV: 20%
+
+  Cluster 1: Média = 496.88 kvar | Mín = 242.16 kvar | Máx = 755.33 kvar | 165 dias
+
+  Cluster 2: Média = 861.11 kvar | Mín = 273.79 kvar | Máx = 1360.97 kvar | 39 dias
+
+  Cluster 3: Média = 360.35 kvar | Mín = 165.04 kvar | Máx = 618.56 kvar | 83 dias
+
+  Cluster 4: Média = 640.94 kvar | Mín = 252.10 kvar | Máx = 1079.59 kvar | 78 dias
+Condição: VoltVar | Nível PV: 40%
+
+  Cluster 1: Média = 857.98 kvar | Mín = 276.68 kvar | Máx = 1352.16 kvar | 39 dias
+
+  Cluster 2: Média = 361.08 kvar | Mín = 169.63 kvar | Máx = 618.56 kvar | 83 dias
+
+  Cluster 3: Média = 493.56 kvar | Mín = 244.92 kvar | Máx = 745.94 kvar | 164 dias
+
+  Cluster 4: Média = 636.27 kvar | Mín = 253.55 kvar | Máx = 1070.17 kvar | 79 dias
+Condição: VoltVar | Nível PV: 60%
+
+  Cluster 1: Média = 492.50 kvar | Mín = 249.28 kvar | Máx = 737.06 kvar | 165 dias
+
+  Cluster 2: Média = 854.89 kvar | Mín = 279.91 kvar | Máx = 1350.75 kvar | 39 dias
+
+  Cluster 3: Média = 634.44 kvar | Mín = 256.98 kvar | Máx = 1060.44 kvar | 78 dias
+
+  Cluster 4: Média = 365.62 kvar | Mín = 177.55 kvar | Máx = 618.56 kvar | 83 dias
+----------------------------------------------------------------------
+
+Separando os dados por cluster...
+
+FP1 - 0% - Cluster 1: 84 dias
+FP1 - 0% - Cluster 2: 39 dias
+FP1 - 0% - Cluster 3: 78 dias
+FP1 - 0% - Cluster 4: 164 dias
+FP1 - 20% - Cluster 1: 165 dias
+FP1 - 20% - Cluster 2: 39 dias
+FP1 - 20% - Cluster 3: 83 dias
+FP1 - 20% - Cluster 4: 78 dias
+FP1 - 40% - Cluster 1: 165 dias
+FP1 - 40% - Cluster 2: 39 dias
+FP1 - 40% - Cluster 3: 78 dias
+FP1 - 40% - Cluster 4: 83 dias
+FP1 - 60% - Cluster 1: 165 dias
+FP1 - 60% - Cluster 2: 39 dias
+FP1 - 60% - Cluster 3: 83 dias
+FP1 - 60% - Cluster 4: 78 dias
+VoltVar - 20% - Cluster 1: 165 dias
+VoltVar - 20% - Cluster 2: 39 dias
+VoltVar - 20% - Cluster 3: 83 dias
+VoltVar - 20% - Cluster 4: 78 dias
+VoltVar - 40% - Cluster 1: 39 dias
+VoltVar - 40% - Cluster 2: 83 dias
+VoltVar - 40% - Cluster 3: 164 dias
+VoltVar - 40% - Cluster 4: 79 dias
+VoltVar - 60% - Cluster 1: 165 dias
+VoltVar - 60% - Cluster 2: 39 dias
+VoltVar - 60% - Cluster 3: 78 dias
+VoltVar - 60% - Cluster 4: 83 dias
+----------------------------------------------------------------------
+
+Salvando arquivos dos clusters...
+
+FP1 - Cenário 0% - Cluster 1
+ Número de linhas: 1092
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Cluster_1_0.parquet
+FP1 - Cenário 0% - Cluster 2
+ Número de linhas: 507
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Cluster_2_0.parquet
+FP1 - Cenário 0% - Cluster 3
+ Número de linhas: 1014
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Cluster_3_0.parquet
+FP1 - Cenário 0% - Cluster 4
+ Número de linhas: 2132
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Cluster_4_0.parquet
+Arquivo salvo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Dias_Clusters_0.xlsx
+
+FP1 - Cenário 20% - Cluster 1
+ Número de linhas: 2145
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Cluster_1_20.parquet
+FP1 - Cenário 20% - Cluster 2
+ Número de linhas: 507
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Cluster_2_20.parquet
+FP1 - Cenário 20% - Cluster 3
+ Número de linhas: 1079
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Cluster_3_20.parquet
+FP1 - Cenário 20% - Cluster 4
+ Número de linhas: 1014
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Cluster_4_20.parquet
+Arquivo salvo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Dias_Clusters_20.xlsx
+
+FP1 - Cenário 40% - Cluster 1
+ Número de linhas: 2145
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Cluster_1_40.parquet
+FP1 - Cenário 40% - Cluster 2
+ Número de linhas: 507
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Cluster_2_40.parquet
+FP1 - Cenário 40% - Cluster 3
+ Número de linhas: 1014
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Cluster_3_40.parquet
+FP1 - Cenário 40% - Cluster 4
+ Número de linhas: 1079
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Cluster_4_40.parquet
+Arquivo salvo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Dias_Clusters_40.xlsx
+
+FP1 - Cenário 60% - Cluster 1
+ Número de linhas: 2145
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Cluster_1_60.parquet
+FP1 - Cenário 60% - Cluster 2
+ Número de linhas: 507
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Cluster_2_60.parquet
+FP1 - Cenário 60% - Cluster 3
+ Número de linhas: 1079
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Cluster_3_60.parquet
+FP1 - Cenário 60% - Cluster 4
+ Número de linhas: 1014
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Cluster_4_60.parquet
+Arquivo salvo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1/Dias_Clusters_60.xlsx
+
+VoltVar - Cenário 20% - Cluster 1
+ Número de linhas: 2145
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar/Cluster_1_20_VV.parquet
+VoltVar - Cenário 20% - Cluster 2
+ Número de linhas: 507
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar/Cluster_2_20_VV.parquet
+VoltVar - Cenário 20% - Cluster 3
+ Número de linhas: 1079
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar/Cluster_3_20_VV.parquet
+VoltVar - Cenário 20% - Cluster 4
+ Número de linhas: 1014
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar/Cluster_4_20_VV.parquet
+Arquivo salvo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar/Dias_Clusters_20_VV.xlsx
+
+VoltVar - Cenário 40% - Cluster 1
+ Número de linhas: 507
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar/Cluster_1_40_VV.parquet
+VoltVar - Cenário 40% - Cluster 2
+ Número de linhas: 1079
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar/Cluster_2_40_VV.parquet
+VoltVar - Cenário 40% - Cluster 3
+ Número de linhas: 2132
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar/Cluster_3_40_VV.parquet
+VoltVar - Cenário 40% - Cluster 4
+ Número de linhas: 1027
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar/Cluster_4_40_VV.parquet
+Arquivo salvo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar/Dias_Clusters_40_VV.xlsx
+
+VoltVar - Cenário 60% - Cluster 1
+ Número de linhas: 2145
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar/Cluster_1_60_VV.parquet
+VoltVar - Cenário 60% - Cluster 2
+ Número de linhas: 507
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar/Cluster_2_60_VV.parquet
+VoltVar - Cenário 60% - Cluster 3
+ Número de linhas: 1014
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar/Cluster_3_60_VV.parquet
+VoltVar - Cenário 60% - Cluster 4
+ Número de linhas: 1079
+ Arquivo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar/Cluster_4_60_VV.parquet
+Arquivo salvo: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar/Dias_Clusters_60_VV.xlsx
+
+Clusters FP1 salvos em:
+/home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1
+
+Clusters Volt-VAr salvos em:
+/home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar
+----------------------------------------------------------------------
+
+======================================================================
+CLUSTERIZAÇÃO CONCLUÍDA
+======================================================================
+
+Condições processadas:
+  FP1      -> /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/FP1
+  Volt-VAr -> /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/dados/outputs/clusters/VoltVar
+
+A metodologia de clusterização foi mantida.
+======================================================================
+==============================================================================
+STEP 4: Clusterization
+Script: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_05/estimador_PV/clusterizador_FP1_VoltVar.py
+Started: 2026-09-17T01:41:10
+==============================================================================
+

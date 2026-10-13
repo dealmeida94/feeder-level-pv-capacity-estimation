@@ -1,0 +1,28 @@
+==========================================================================================
+PV ESTIMATION ANALYSIS SUMMARY
+==========================================================================================
+
+Input file — Without Volt-VAr:
+/home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_07/dados/outputs/estimacao_PV/Resultados_da_estimacao_por_clusters_FP1.xlsx
+Input file — With Volt-VAr:
+/home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_07/dados/outputs/estimacao_PV/Resultados_da_estimacao_por_clusters_VV.xlsx
+
+Optimal adjustment coefficient (k): 0.80
+Minimum mean estimation error: 4.224%
+
+==========================================================================================
+BEST RESULT FOR EACH PV PENETRATION SCENARIO
+==========================================================================================
+
+ PV Penetration (%)  Best Cluster Adjustment Coefficient (k) Actual PV Capacity (kW) Estimated PV Capacity (kW) Estimation Error (%) Accuracy (%)    RMSE     MAE      R²  Number of Equations
+                 20             1                       0.75                  294.62                     293.07                 0.53        99.47  81.503  63.921 0.83779               175890
+                 40             4                       0.80                  589.24                     581.78                 1.27        98.73 104.659  82.655 0.92976                10140
+                 60             2                       0.80                  883.86                     882.54                 0.15        99.85 147.756 113.721 0.84099                38038
+
+==========================================================================================
+FIGURES GENERATED
+==========================================================================================
+1. Error_vs_k.png
+2. EstimatedPower_vs_k.png
+3. MeanError_vs_k.png
+4. Accuracy_vs_k.png

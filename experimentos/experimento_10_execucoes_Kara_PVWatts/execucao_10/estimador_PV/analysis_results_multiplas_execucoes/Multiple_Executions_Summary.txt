@@ -1,0 +1,66 @@
+====================================================================================================
+MULTIPLE-EXECUTION PV ESTIMATION ANALYSIS
+====================================================================================================
+
+Experiment directory:
+/home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes
+
+Executions found: 5/10
+
+====================================================================================================
+OVERALL SUMMARY
+====================================================================================================
+
+       Condition  Executions  Mean_Error  Std_Error  Mean_Accuracy  Std_Accuracy
+   With Volt-VAr           5    0.605150   0.398429      99.394850      0.398429
+Without Volt-VAr           5    0.816226   0.636114      99.183774      0.636114
+
+====================================================================================================
+STATISTICAL SUMMARY BY CONDITION AND PV PENETRATION
+====================================================================================================
+
+       Condition  Cenário  Executions  Mean_Error  Std_Error  Min_Error  Max_Error  Median_Error  Mean_Accuracy  Std_Accuracy  Mean_Estimated_Power  Std_Estimated_Power  Mean_Actual_Power  Mean_RMSE   Mean_MAE
+   With Volt-VAr       20           5    0.470237   0.296357   0.181729   0.900804      0.334178      99.529763      0.296357            295.791250             1.202823            294.620  72.842167  57.601843
+   With Volt-VAr       40           5    0.570631   0.383713   0.256903   1.212211      0.450089      99.429369      0.383713            591.996878             3.121485            589.240 105.236948  81.778968
+   With Volt-VAr       60           5    0.774582   0.510314   0.097627   1.313298      0.603712      99.225418      0.510314            881.655865             8.536119            883.859 144.179666 111.016763
+Without Volt-VAr       20           5    0.736137   0.384944   0.264011   1.224341      0.762833      99.263863      0.384944            295.889823             2.269432            294.620  86.634943  68.505445
+Without Volt-VAr       40           5    0.341360   0.247305   0.164861   0.734279      0.196664      99.658640      0.247305            589.811335             2.602456            589.240 107.045449  83.358675
+Without Volt-VAr       60           5    1.371182   0.729411   0.792531   2.569815      1.198667      98.628818      0.729411            879.788730            14.298663            883.859 139.884202 107.498516
+
+====================================================================================================
+VOLT-VAR COMPARISON
+====================================================================================================
+
+ Cenário  Executions  Mean_Error_Without_VoltVar  Mean_Error_With_VoltVar  Mean_Error_Difference  Std_Error_Difference  Mean_Accuracy_Without_VoltVar  Mean_Accuracy_With_VoltVar
+      20           5                    0.736137                 0.470237              -0.265900              0.523854                      99.263863                   99.529763
+      40           5                    0.341360                 0.570631               0.229271              0.567604                      99.658640                   99.429369
+      60           5                    1.371182                 0.774582              -0.596600              0.904824                      98.628818                   99.225418
+
+Interpretation rule for Error Difference: With Volt-VAr minus Without Volt-VAr. Negative values indicate lower estimation error with Volt-VAr.
+
+
+====================================================================================================
+BEST CLUSTER FREQUENCY
+====================================================================================================
+
+       Condition  Cenário  Cluster  Number of Executions  Frequency (%)
+   With Volt-VAr       20        1                     1           20.0
+   With Volt-VAr       20        2                     2           40.0
+   With Volt-VAr       20        3                     1           20.0
+   With Volt-VAr       20        4                     1           20.0
+   With Volt-VAr       40        2                     3           60.0
+   With Volt-VAr       40        3                     1           20.0
+   With Volt-VAr       40        4                     1           20.0
+   With Volt-VAr       60        1                     2           40.0
+   With Volt-VAr       60        2                     1           20.0
+   With Volt-VAr       60        4                     2           40.0
+Without Volt-VAr       20        1                     1           20.0
+Without Volt-VAr       20        2                     1           20.0
+Without Volt-VAr       20        3                     3           60.0
+Without Volt-VAr       40        1                     1           20.0
+Without Volt-VAr       40        2                     2           40.0
+Without Volt-VAr       40        3                     1           20.0
+Without Volt-VAr       40        4                     1           20.0
+Without Volt-VAr       60        1                     1           20.0
+Without Volt-VAr       60        3                     1           20.0
+Without Volt-VAr       60        4                     3           60.0

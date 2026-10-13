@@ -1,0 +1,20 @@
+// Loadshapes do FeederA
+// Dados normalizados em PU
+// Valores de base salvos em: 
+// /home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base / FeederA_bases.csv 
+
+New Loadshape.Load_Bus_1003 npts=8760 interval=1 mult=(file=/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederA/FeederA_Bus_1003.txt)
+New Loadshape.Load_Bus_1004 npts=8760 interval=1 mult=(file=/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederA/FeederA_Bus_1004.txt)
+New Loadshape.Load_Bus_1005 npts=8760 interval=1 mult=(file=/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederA/FeederA_Bus_1005.txt)
+New Loadshape.Load_Bus_1006 npts=8760 interval=1 mult=(file=/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederA/FeederA_Bus_1006.txt)
+New Loadshape.Load_Bus_1007 npts=8760 interval=1 mult=(file=/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederA/FeederA_Bus_1007.txt)
+New Loadshape.Load_Bus_1008 npts=8760 interval=1 mult=(file=/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederA/FeederA_Bus_1008.txt)
+New Loadshape.Load_Bus_1009 npts=8760 interval=1 mult=(file=/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederA/FeederA_Bus_1009.txt)
+New Loadshape.Load_Bus_1010 npts=8760 interval=1 mult=(file=/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederA/FeederA_Bus_1010.txt)
+New Loadshape.Load_Bus_1011 npts=8760 interval=1 mult=(file=/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederA/FeederA_Bus_1011.txt)
+New Loadshape.Load_Bus_1012 npts=8760 interval=1 mult=(file=/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederA/FeederA_Bus_1012.txt)
+New Loadshape.Load_Bus_1013 npts=8760 interval=1 mult=(file=/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederA/FeederA_Bus_1013.txt)
+New Loadshape.Load_Bus_1014 npts=8760 interval=1 mult=(file=/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederA/FeederA_Bus_1014.txt)
+New Loadshape.Load_Bus_1015 npts=8760 interval=1 mult=(file=/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederA/FeederA_Bus_1015.txt)
+New Loadshape.Load_Bus_1016 npts=8760 interval=1 mult=(file=/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederA/FeederA_Bus_1016.txt)
+New Loadshape.Load_Bus_1017 npts=8760 interval=1 mult=(file=/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederA/FeederA_Bus_1017.txt)

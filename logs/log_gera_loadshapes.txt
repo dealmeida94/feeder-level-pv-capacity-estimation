@@ -1,0 +1,9 @@
+Tempo de processamento: 00m:07s
+
+Loadshapes por Bus (.txt) salvos em:
+	/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederA
+	/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederB
+	/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base/FeederC
+
+Arquivos Loadshapes.dss salvos em:
+	/home/matheus/Documentos/BtM-PV-estimating/dados/inputs/carga_base

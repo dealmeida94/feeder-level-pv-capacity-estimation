@@ -1,0 +1,16 @@
+! Arquivo Load - Feeder A
+New Load.Load_1003 phases=3 conn=wye bus1=T_bus1003_L.1.2.3.0 kV=0.208 kW=70.379 yearly=Load_Bus_1003 model=1
+New Load.Load_1004 phases=3 conn=wye bus1=T_bus1004_L.1.2.3.0 kV=0.208 kW=41.534 yearly=Load_Bus_1004 model=1
+New Load.Load_1005 phases=3 conn=wye bus1=T_bus1005_L.1.2.3.0 kV=0.208 kW=53.923 yearly=Load_Bus_1005 model=1
+New Load.Load_1006 phases=1 conn=delta bus1=T_bus1006_L.1.2 kV=0.208 kW=37.880 yearly=Load_Bus_1006 model=1
+New Load.Load_1007 phases=1 conn=delta bus1=T_bus1007_L.1.2 kV=0.208 kW=14.500 yearly=Load_Bus_1007 model=1
+New Load.Load_1008 phases=3 conn=wye bus1=T_bus1008_L.1.2.3.0 kV=0.208 kW=37.461 yearly=Load_Bus_1008 model=1
+New Load.Load_1009 phases=3 conn=wye bus1=T_bus1009_L.1.2.3.0 kV=0.208 kW=51.674 yearly=Load_Bus_1009 model=1
+New Load.Load_1010 phases=3 conn=wye bus1=T_bus1010_L.1.2.3.0 kV=0.208 kW=22.550 yearly=Load_Bus_1010 model=1
+New Load.Load_1011 phases=2 conn=wye bus1=T_bus1011_L.1.2 kV=0.208 kW=16.471 yearly=Load_Bus_1011 model=1
+New Load.Load_1012 phases=2 conn=wye bus1=T_bus1012_L.1.2 kV=0.208 kW=18.268 yearly=Load_Bus_1012 model=1
+New Load.Load_1013 phases=3 conn=wye bus1=T_bus1013_L.1.2.3.0 kV=0.208 kW=19.602 yearly=Load_Bus_1013 model=1
+New Load.Load_1014 phases=2 conn=wye bus1=T_bus1014_L.1.2 kV=0.208 kW=5.429 yearly=Load_Bus_1014 model=1
+New Load.Load_1015 phases=2 conn=wye bus1=T_bus1015_L.1.2 kV=0.208 kW=7.510 yearly=Load_Bus_1015 model=1
+New Load.Load_1016 phases=2 conn=wye bus1=T_bus1016_L.1.2 kV=0.208 kW=18.268 yearly=Load_Bus_1016 model=1
+New Load.Load_1017 phases=2 conn=wye bus1=T_bus1017_L.1.2 kV=0.208 kW=17.185 yearly=Load_Bus_1017 model=1

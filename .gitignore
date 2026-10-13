@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Arquivos temporários de editores
+*~
+.~lock.*#
+*.swp
+*.swo
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Dados e planilhas
+*parquet
+*.xlsx
+*.csv
+
+# Figuras repetidas das execuções experimentais
+experimentos/**/*.png
+experimentos/**/*.jpg
+experimentos/**/*.jpeg
+experimentos/**/*.svg

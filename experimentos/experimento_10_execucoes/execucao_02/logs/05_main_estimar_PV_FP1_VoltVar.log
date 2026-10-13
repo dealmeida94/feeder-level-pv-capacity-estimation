@@ -1,0 +1,1147 @@
+
+======================================================================
+ESTIMAÇÃO DE POTÊNCIA PV - FP = 1
+======================================================================
+
+Foram localizados 12 clusters para FP = 1 em:
+/home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_02/dados/outputs/clusters/FP1
+
+Cenário 20%
+   Cluster 1
+   Cluster 2
+   Cluster 3
+   Cluster 4
+
+Cenário 40%
+   Cluster 1
+   Cluster 2
+   Cluster 3
+   Cluster 4
+
+Cenário 60%
+   Cluster 1
+   Cluster 2
+   Cluster 3
+   Cluster 4
+
+
+Foram carregados os dados dos clusters de 3 cenários.
+Cenário 20%: 4 clusters
+Cenário 40%: 4 clusters
+Cenário 60%: 4 clusters
+============================================================
+
+Estimativa com k = 0.60
+
+Nível PV = 20%
+  Cluster 1 | P = 388.28 kW | Erro = 31.79% | Var = 2.128379
+  Cluster 2 | P = 353.03 kW | Erro = 19.83% | Var = 59.563943
+  Cluster 3 | P = 349.11 kW | Erro = 18.50% | Var = 1.132733
+  Cluster 4 | P = 400.31 kW | Erro = 35.87% | Var = 6.169059
+
+Nível PV = 40%
+  Cluster 1 | P = 798.65 kW | Erro = 35.54% | Var = 4.939909
+  Cluster 2 | P = 763.76 kW | Erro = 29.62% | Var = 10.961568
+  Cluster 3 | P = 774.37 kW | Erro = 31.42% | Var = 81.503196
+  Cluster 4 | P = 737.13 kW | Erro = 25.10% | Var = 2.201877
+
+Nível PV = 60%
+  Cluster 1 | P = 1125.97 kW | Erro = 27.39% | Var = 3.778704
+  Cluster 2 | P = 1189.82 kW | Erro = 34.62% | Var = 115.760726
+  Cluster 3 | P = 1132.61 kW | Erro = 28.14% | Var = 18.924285
+  Cluster 4 | P = 1209.13 kW | Erro = 36.80% | Var = 10.435050
+
+============================================================
+============================================================
+
+Estimativa com k = 0.65
+
+Nível PV = 20%
+  Cluster 1 | P = 358.41 kW | Erro = 21.65% | Var = 1.813530
+  Cluster 2 | P = 325.88 kW | Erro = 10.61% | Var = 50.752709
+  Cluster 3 | P = 322.26 kW | Erro = 9.38% | Var = 0.965169
+  Cluster 4 | P = 369.52 kW | Erro = 25.42% | Var = 5.256476
+
+Nível PV = 40%
+  Cluster 1 | P = 737.22 kW | Erro = 25.11% | Var = 4.209153
+  Cluster 2 | P = 705.01 kW | Erro = 19.65% | Var = 9.340034
+  Cluster 3 | P = 714.80 kW | Erro = 21.31% | Var = 69.446510
+  Cluster 4 | P = 680.43 kW | Erro = 15.48% | Var = 1.876156
+
+Nível PV = 60%
+  Cluster 1 | P = 1039.36 kW | Erro = 17.59% | Var = 3.219724
+  Cluster 2 | P = 1098.30 kW | Erro = 24.26% | Var = 98.636358
+  Cluster 3 | P = 1045.48 kW | Erro = 18.29% | Var = 16.124835
+  Cluster 4 | P = 1116.12 kW | Erro = 26.28% | Var = 8.891403
+
+============================================================
+============================================================
+
+Estimativa com k = 0.70
+
+Nível PV = 20%
+  Cluster 1 | P = 332.81 kW | Erro = 12.96% | Var = 1.563707
+  Cluster 2 | P = 302.60 kW | Erro = 2.71% | Var = 43.761264
+  Cluster 3 | P = 299.24 kW | Erro = 1.57% | Var = 0.832212
+  Cluster 4 | P = 343.12 kW | Erro = 16.46% | Var = 4.532370
+
+Nível PV = 40%
+  Cluster 1 | P = 684.56 kW | Erro = 16.18% | Var = 3.629321
+  Cluster 2 | P = 654.65 kW | Erro = 11.10% | Var = 8.053397
+  Cluster 3 | P = 663.74 kW | Erro = 12.64% | Var = 59.879899
+  Cluster 4 | P = 631.82 kW | Erro = 7.23% | Var = 1.617706
+
+Nível PV = 60%
+  Cluster 1 | P = 965.12 kW | Erro = 9.19% | Var = 2.776190
+  Cluster 2 | P = 1019.85 kW | Erro = 15.39% | Var = 85.048697
+  Cluster 3 | P = 970.81 kW | Erro = 9.84% | Var = 13.903556
+  Cluster 4 | P = 1036.39 kW | Erro = 17.26% | Var = 7.666567
+
+============================================================
+============================================================
+
+Estimativa com k = 0.75
+
+Nível PV = 20%
+  Cluster 1 | P = 310.62 kW | Erro = 5.43% | Var = 1.362163
+  Cluster 2 | P = 282.43 kW | Erro = 4.14% | Var = 38.120923
+  Cluster 3 | P = 279.29 kW | Erro = 5.20% | Var = 0.724949
+  Cluster 4 | P = 320.25 kW | Erro = 8.70% | Var = 3.948198
+
+Nível PV = 40%
+  Cluster 1 | P = 638.92 kW | Erro = 8.43% | Var = 3.161542
+  Cluster 2 | P = 611.01 kW | Erro = 3.69% | Var = 7.015404
+  Cluster 3 | P = 619.49 kW | Erro = 5.13% | Var = 52.162045
+  Cluster 4 | P = 589.70 kW | Erro = 0.08% | Var = 1.409202
+
+Nível PV = 60%
+  Cluster 1 | P = 900.78 kW | Erro = 1.91% | Var = 2.418370
+  Cluster 2 | P = 951.86 kW | Erro = 7.69% | Var = 74.086865
+  Cluster 3 | P = 906.09 kW | Erro = 2.51% | Var = 12.111542
+  Cluster 4 | P = 967.30 kW | Erro = 9.44% | Var = 6.678432
+
+============================================================
+============================================================
+
+Estimativa com k = 0.80
+
+Nível PV = 20%
+  Cluster 1 | P = 291.21 kW | Erro = 1.16% | Var = 1.197213
+  Cluster 2 | P = 264.77 kW | Erro = 10.13% | Var = 33.504718
+  Cluster 3 | P = 261.84 kW | Erro = 11.13% | Var = 0.637163
+  Cluster 4 | P = 300.23 kW | Erro = 1.90% | Var = 3.470096
+
+Nível PV = 40%
+  Cluster 1 | P = 598.99 kW | Erro = 1.65% | Var = 2.778699
+  Cluster 2 | P = 572.82 kW | Erro = 2.79% | Var = 6.165882
+  Cluster 3 | P = 580.77 kW | Erro = 1.44% | Var = 45.845548
+  Cluster 4 | P = 552.85 kW | Erro = 6.18% | Var = 1.238556
+
+Nível PV = 60%
+  Cluster 1 | P = 844.48 kW | Erro = 4.46% | Var = 2.125521
+  Cluster 2 | P = 892.37 kW | Erro = 0.96% | Var = 65.115408
+  Cluster 3 | P = 849.46 kW | Erro = 3.89% | Var = 10.644910
+  Cluster 4 | P = 906.85 kW | Erro = 2.60% | Var = 5.869715
+
+============================================================
+============================================================
+
+Estimativa com k = 0.85
+
+Nível PV = 20%
+  Cluster 1 | P = 274.08 kW | Erro = 6.97% | Var = 1.060507
+  Cluster 2 | P = 249.20 kW | Erro = 15.42% | Var = 29.678920
+  Cluster 3 | P = 246.43 kW | Erro = 16.36% | Var = 0.564407
+  Cluster 4 | P = 282.57 kW | Erro = 4.09% | Var = 3.073856
+
+Nível PV = 40%
+  Cluster 1 | P = 563.75 kW | Erro = 4.33% | Var = 2.461408
+  Cluster 2 | P = 539.12 kW | Erro = 8.51% | Var = 5.461819
+  Cluster 3 | P = 546.61 kW | Erro = 7.23% | Var = 40.610589
+  Cluster 4 | P = 520.33 kW | Erro = 11.70% | Var = 1.097129
+
+Nível PV = 60%
+  Cluster 1 | P = 794.80 kW | Erro = 10.08% | Var = 1.882814
+  Cluster 2 | P = 839.88 kW | Erro = 4.98% | Var = 57.680085
+  Cluster 3 | P = 799.49 kW | Erro = 9.55% | Var = 9.429402
+  Cluster 4 | P = 853.50 kW | Erro = 3.43% | Var = 5.199471
+
+============================================================
+============================================================
+
+Estimativa com k = 0.90
+
+Nível PV = 20%
+  Cluster 1 | P = 258.85 kW | Erro = 12.14% | Var = 0.945946
+  Cluster 2 | P = 235.35 kW | Erro = 20.12% | Var = 26.472863
+  Cluster 3 | P = 232.74 kW | Erro = 21.00% | Var = 0.503437
+  Cluster 4 | P = 266.87 kW | Erro = 9.42% | Var = 2.741804
+
+Nível PV = 40%
+  Cluster 1 | P = 532.43 kW | Erro = 9.64% | Var = 2.195515
+  Cluster 2 | P = 509.17 kW | Erro = 13.59% | Var = 4.871808
+  Cluster 3 | P = 516.24 kW | Erro = 12.39% | Var = 36.223642
+  Cluster 4 | P = 491.42 kW | Erro = 16.60% | Var = 0.978612
+
+Nível PV = 60%
+  Cluster 1 | P = 750.65 kW | Erro = 15.07% | Var = 1.679424
+  Cluster 2 | P = 793.22 kW | Erro = 10.26% | Var = 51.449212
+  Cluster 3 | P = 755.07 kW | Erro = 14.57% | Var = 8.410793
+  Cluster 4 | P = 806.08 kW | Erro = 8.80% | Var = 4.637800
+
+============================================================
+============================================================
+
+Estimativa com k = 0.95
+
+Nível PV = 20%
+  Cluster 1 | P = 245.23 kW | Erro = 16.77% | Var = 0.848993
+  Cluster 2 | P = 222.97 kW | Erro = 24.32% | Var = 23.759578
+  Cluster 3 | P = 220.49 kW | Erro = 25.16% | Var = 0.451838
+  Cluster 4 | P = 252.83 kW | Erro = 14.19% | Var = 2.460788
+
+Nível PV = 40%
+  Cluster 1 | P = 504.41 kW | Erro = 14.40% | Var = 1.970490
+  Cluster 2 | P = 482.37 kW | Erro = 18.14% | Var = 4.372482
+  Cluster 3 | P = 489.07 kW | Erro = 17.00% | Var = 32.510970
+  Cluster 4 | P = 465.55 kW | Erro = 20.99% | Var = 0.878311
+
+Nível PV = 60%
+  Cluster 1 | P = 711.14 kW | Erro = 19.54% | Var = 1.507295
+  Cluster 2 | P = 751.47 kW | Erro = 14.98% | Var = 46.176024
+  Cluster 3 | P = 715.33 kW | Erro = 19.07% | Var = 7.548745
+  Cluster 4 | P = 763.66 kW | Erro = 13.60% | Var = 4.162458
+
+============================================================
+============================================================
+
+Estimativa com k = 1.00
+
+Nível PV = 20%
+  Cluster 1 | P = 232.97 kW | Erro = 20.93% | Var = 0.766217
+  Cluster 2 | P = 211.82 kW | Erro = 28.10% | Var = 21.443019
+  Cluster 3 | P = 209.47 kW | Erro = 28.90% | Var = 0.407784
+  Cluster 4 | P = 240.19 kW | Erro = 18.48% | Var = 2.220861
+
+Nível PV = 40%
+  Cluster 1 | P = 479.19 kW | Erro = 18.68% | Var = 1.778367
+  Cluster 2 | P = 458.26 kW | Erro = 22.23% | Var = 3.946165
+  Cluster 3 | P = 464.62 kW | Erro = 21.15% | Var = 29.341150
+  Cluster 4 | P = 442.28 kW | Erro = 24.94% | Var = 0.792676
+
+Nível PV = 60%
+  Cluster 1 | P = 675.58 kW | Erro = 23.56% | Var = 1.360333
+  Cluster 2 | P = 713.89 kW | Erro = 19.23% | Var = 41.673861
+  Cluster 3 | P = 679.56 kW | Erro = 23.11% | Var = 6.812743
+  Cluster 4 | P = 725.48 kW | Erro = 17.92% | Var = 3.756618
+
+============================================================
+
+  >>> RESULTADO FINAL - Cenário 20% - FP = 1
+      Potência real      = 294.62 kW
+      Potência estimada  = 366.59 kW
+      Erro               = 24.43%
+      Acerto             = 75.57%
+      Desvio padrão      = 0.8080 kW
+      Pesos:
+        C1: 0.3068
+        C2: 0.0110
+        C3: 0.5764
+        C4: 0.1058
+
+  >>> RESULTADO FINAL - Cenário 40% - FP = 1
+      Potência real      = 589.24 kW
+      Potência estimada  = 757.31 kW
+      Erro               = 28.52%
+      Acerto             = 71.48%
+      Desvio padrão      = 1.1470 kW
+      Pesos:
+        C1: 0.2663
+        C2: 0.1200
+        C3: 0.0161
+        C4: 0.5975
+
+  >>> RESULTADO FINAL - Cenário 60% - FP = 1
+      Potência real      = 883.86 kW
+      Potência estimada  = 1146.99 kW
+      Erro               = 29.77%
+      Acerto             = 70.23%
+      Desvio padrão      = 1.5395 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0205
+        C3: 0.1252
+        C4: 0.2271
+
+  >>> RESULTADO FINAL - Cenário 20% - FP = 1
+      Potência real      = 294.62 kW
+      Potência estimada  = 338.39 kW
+      Erro               = 14.86%
+      Acerto             = 85.14%
+      Desvio padrão      = 0.7459 kW
+      Pesos:
+        C1: 0.3068
+        C2: 0.0110
+        C3: 0.5764
+        C4: 0.1058
+
+  >>> RESULTADO FINAL - Cenário 40% - FP = 1
+      Potência real      = 589.24 kW
+      Potência estimada  = 699.06 kW
+      Erro               = 18.64%
+      Acerto             = 81.36%
+      Desvio padrão      = 1.0588 kW
+      Pesos:
+        C1: 0.2663
+        C2: 0.1200
+        C3: 0.0161
+        C4: 0.5975
+
+  >>> RESULTADO FINAL - Cenário 60% - FP = 1
+      Potência real      = 883.86 kW
+      Potência estimada  = 1058.76 kW
+      Erro               = 19.79%
+      Acerto             = 80.21%
+      Desvio padrão      = 1.4210 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0205
+        C3: 0.1252
+        C4: 0.2271
+
+  >>> RESULTADO FINAL - Cenário 20% - FP = 1
+      Potência real      = 294.62 kW
+      Potência estimada  = 314.22 kW
+      Erro               = 6.65%
+      Acerto             = 93.35%
+      Desvio padrão      = 0.6926 kW
+      Pesos:
+        C1: 0.3068
+        C2: 0.0110
+        C3: 0.5764
+        C4: 0.1058
+
+  >>> RESULTADO FINAL - Cenário 40% - FP = 1
+      Potência real      = 589.24 kW
+      Potência estimada  = 649.12 kW
+      Erro               = 10.16%
+      Acerto             = 89.84%
+      Desvio padrão      = 0.9832 kW
+      Pesos:
+        C1: 0.2663
+        C2: 0.1200
+        C3: 0.0161
+        C4: 0.5975
+
+  >>> RESULTADO FINAL - Cenário 60% - FP = 1
+      Potência real      = 883.86 kW
+      Potência estimada  = 983.14 kW
+      Erro               = 11.23%
+      Acerto             = 88.77%
+      Desvio padrão      = 1.3195 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0205
+        C3: 0.1252
+        C4: 0.2271
+
+  >>> RESULTADO FINAL - Cenário 20% - FP = 1
+      Potência real      = 294.62 kW
+      Potência estimada  = 293.27 kW
+      Erro               = 0.46%
+      Acerto             = 99.54%
+      Desvio padrão      = 0.6464 kW
+      Pesos:
+        C1: 0.3068
+        C2: 0.0110
+        C3: 0.5764
+        C4: 0.1058
+
+  >>> RESULTADO FINAL - Cenário 40% - FP = 1
+      Potência real      = 589.24 kW
+      Potência estimada  = 605.85 kW
+      Erro               = 2.82%
+      Acerto             = 97.18%
+      Desvio padrão      = 0.9176 kW
+      Pesos:
+        C1: 0.2663
+        C2: 0.1200
+        C3: 0.0161
+        C4: 0.5975
+
+  >>> RESULTADO FINAL - Cenário 60% - FP = 1
+      Potência real      = 883.86 kW
+      Potência estimada  = 917.60 kW
+      Erro               = 3.82%
+      Acerto             = 96.18%
+      Desvio padrão      = 1.2316 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0205
+        C3: 0.1252
+        C4: 0.2271
+
+  >>> RESULTADO FINAL - Cenário 20% - FP = 1
+      Potência real      = 294.62 kW
+      Potência estimada  = 274.94 kW
+      Erro               = 6.68%
+      Acerto             = 93.32%
+      Desvio padrão      = 0.6060 kW
+      Pesos:
+        C1: 0.3068
+        C2: 0.0110
+        C3: 0.5764
+        C4: 0.1058
+
+  >>> RESULTADO FINAL - Cenário 40% - FP = 1
+      Potência real      = 589.24 kW
+      Potência estimada  = 567.98 kW
+      Erro               = 3.61%
+      Acerto             = 96.39%
+      Desvio padrão      = 0.8603 kW
+      Pesos:
+        C1: 0.2663
+        C2: 0.1200
+        C3: 0.0161
+        C4: 0.5975
+
+  >>> RESULTADO FINAL - Cenário 60% - FP = 1
+      Potência real      = 883.86 kW
+      Potência estimada  = 860.25 kW
+      Erro               = 2.67%
+      Acerto             = 97.33%
+      Desvio padrão      = 1.1546 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0205
+        C3: 0.1252
+        C4: 0.2271
+
+  >>> RESULTADO FINAL - Cenário 20% - FP = 1
+      Potência real      = 294.62 kW
+      Potência estimada  = 258.77 kW
+      Erro               = 12.17%
+      Acerto             = 87.83%
+      Desvio padrão      = 0.5704 kW
+      Pesos:
+        C1: 0.3068
+        C2: 0.0110
+        C3: 0.5764
+        C4: 0.1058
+
+  >>> RESULTADO FINAL - Cenário 40% - FP = 1
+      Potência real      = 589.24 kW
+      Potência estimada  = 534.57 kW
+      Erro               = 9.28%
+      Acerto             = 90.72%
+      Desvio padrão      = 0.8097 kW
+      Pesos:
+        C1: 0.2663
+        C2: 0.1200
+        C3: 0.0161
+        C4: 0.5975
+
+  >>> RESULTADO FINAL - Cenário 60% - FP = 1
+      Potência real      = 883.86 kW
+      Potência estimada  = 809.64 kW
+      Erro               = 8.40%
+      Acerto             = 91.60%
+      Desvio padrão      = 1.0867 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0205
+        C3: 0.1252
+        C4: 0.2271
+
+  >>> RESULTADO FINAL - Cenário 20% - FP = 1
+      Potência real      = 294.62 kW
+      Potência estimada  = 244.39 kW
+      Erro               = 17.05%
+      Acerto             = 82.95%
+      Desvio padrão      = 0.5387 kW
+      Pesos:
+        C1: 0.3068
+        C2: 0.0110
+        C3: 0.5764
+        C4: 0.1058
+
+  >>> RESULTADO FINAL - Cenário 40% - FP = 1
+      Potência real      = 589.24 kW
+      Potência estimada  = 504.87 kW
+      Erro               = 14.32%
+      Acerto             = 85.68%
+      Desvio padrão      = 0.7647 kW
+      Pesos:
+        C1: 0.2663
+        C2: 0.1200
+        C3: 0.0161
+        C4: 0.5975
+
+  >>> RESULTADO FINAL - Cenário 60% - FP = 1
+      Potência real      = 883.86 kW
+      Potência estimada  = 764.66 kW
+      Erro               = 13.49%
+      Acerto             = 86.51%
+      Desvio padrão      = 1.0263 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0205
+        C3: 0.1252
+        C4: 0.2271
+
+  >>> RESULTADO FINAL - Cenário 20% - FP = 1
+      Potência real      = 294.62 kW
+      Potência estimada  = 231.53 kW
+      Erro               = 21.41%
+      Acerto             = 78.59%
+      Desvio padrão      = 0.5103 kW
+      Pesos:
+        C1: 0.3068
+        C2: 0.0110
+        C3: 0.5764
+        C4: 0.1058
+
+  >>> RESULTADO FINAL - Cenário 40% - FP = 1
+      Potência real      = 589.24 kW
+      Potência estimada  = 478.30 kW
+      Erro               = 18.83%
+      Acerto             = 81.17%
+      Desvio padrão      = 0.7244 kW
+      Pesos:
+        C1: 0.2663
+        C2: 0.1200
+        C3: 0.0161
+        C4: 0.5975
+
+  >>> RESULTADO FINAL - Cenário 60% - FP = 1
+      Potência real      = 883.86 kW
+      Potência estimada  = 724.42 kW
+      Erro               = 18.04%
+      Acerto             = 81.96%
+      Desvio padrão      = 0.9723 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0205
+        C3: 0.1252
+        C4: 0.2271
+
+  >>> RESULTADO FINAL - Cenário 20% - FP = 1
+      Potência real      = 294.62 kW
+      Potência estimada  = 219.95 kW
+      Erro               = 25.34%
+      Acerto             = 74.66%
+      Desvio padrão      = 0.4848 kW
+      Pesos:
+        C1: 0.3068
+        C2: 0.0110
+        C3: 0.5764
+        C4: 0.1058
+
+  >>> RESULTADO FINAL - Cenário 40% - FP = 1
+      Potência real      = 589.24 kW
+      Potência estimada  = 454.39 kW
+      Erro               = 22.89%
+      Acerto             = 77.11%
+      Desvio padrão      = 0.6882 kW
+      Pesos:
+        C1: 0.2663
+        C2: 0.1200
+        C3: 0.0161
+        C4: 0.5975
+
+  >>> RESULTADO FINAL - Cenário 60% - FP = 1
+      Potência real      = 883.86 kW
+      Potência estimada  = 688.20 kW
+      Erro               = 22.14%
+      Acerto             = 77.86%
+      Desvio padrão      = 0.9237 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0205
+        C3: 0.1252
+        C4: 0.2271
+
+Arquivos salvos:
+  - /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_02/dados/outputs/estimacao_PV/Resultados_da_estimacao_por_clusters_FP1.xlsx
+  - /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_02/dados/outputs/estimacao_PV/Resultados_finais_por_cenario_FP1.xlsx
+
+Tempo de execução FP = 1: 14:58.29
+
+======================================================================
+ESTIMAÇÃO DE POTÊNCIA PV - Volt-VAr
+======================================================================
+
+Foram localizados 12 clusters para Volt-VAr em:
+/home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_02/dados/outputs/clusters/VoltVar
+
+Cenário 20%
+   Cluster 1
+   Cluster 2
+   Cluster 3
+   Cluster 4
+
+Cenário 40%
+   Cluster 1
+   Cluster 2
+   Cluster 3
+   Cluster 4
+
+Cenário 60%
+   Cluster 1
+   Cluster 2
+   Cluster 3
+   Cluster 4
+
+
+Foram carregados os dados dos clusters de 3 cenários.
+Cenário 20%: 4 clusters
+Cenário 40%: 4 clusters
+Cenário 60%: 4 clusters
+============================================================
+
+Estimativa com k = 0.60
+
+Nível PV = 20%
+  Cluster 1 | P = 351.70 kW | Erro = 19.37% | Var = 1.139440
+  Cluster 2 | P = 353.83 kW | Erro = 20.10% | Var = 59.719102
+  Cluster 3 | P = 400.22 kW | Erro = 35.84% | Var = 6.162060
+  Cluster 4 | P = 403.84 kW | Erro = 37.07% | Var = 2.233164
+
+Nível PV = 40%
+  Cluster 1 | P = 836.44 kW | Erro = 41.95% | Var = 5.504686
+  Cluster 2 | P = 775.13 kW | Erro = 31.55% | Var = 81.702123
+  Cluster 3 | P = 769.31 kW | Erro = 30.56% | Var = 10.484241
+  Cluster 4 | P = 744.89 kW | Erro = 26.42% | Var = 2.243995
+
+Nível PV = 60%
+  Cluster 1 | P = 1146.84 kW | Erro = 29.75% | Var = 3.999027
+  Cluster 2 | P = 1193.16 kW | Erro = 34.99% | Var = 116.511737
+  Cluster 3 | P = 1135.06 kW | Erro = 28.42% | Var = 18.945512
+  Cluster 4 | P = 1289.49 kW | Erro = 45.89% | Var = 11.460854
+
+============================================================
+============================================================
+
+Estimativa com k = 0.65
+
+Nível PV = 20%
+  Cluster 1 | P = 324.65 kW | Erro = 10.19% | Var = 0.970884
+  Cluster 2 | P = 326.62 kW | Erro = 10.86% | Var = 50.884915
+  Cluster 3 | P = 369.43 kW | Erro = 25.39% | Var = 5.250512
+  Cluster 4 | P = 372.77 kW | Erro = 26.53% | Var = 1.902815
+
+Nível PV = 40%
+  Cluster 1 | P = 772.09 kW | Erro = 31.03% | Var = 4.690383
+  Cluster 2 | P = 715.51 kW | Erro = 21.43% | Var = 69.616010
+  Cluster 3 | P = 710.13 kW | Erro = 20.52% | Var = 8.933318
+  Cluster 4 | P = 687.59 kW | Erro = 16.69% | Var = 1.912043
+
+Nível PV = 60%
+  Cluster 1 | P = 1058.62 kW | Erro = 19.77% | Var = 3.407455
+  Cluster 2 | P = 1101.38 kW | Erro = 24.61% | Var = 99.276273
+  Cluster 3 | P = 1047.75 kW | Erro = 18.54% | Var = 16.142922
+  Cluster 4 | P = 1190.30 kW | Erro = 34.67% | Var = 9.765461
+
+============================================================
+============================================================
+
+Estimativa com k = 0.70
+
+Nível PV = 20%
+  Cluster 1 | P = 301.46 kW | Erro = 2.32% | Var = 0.837139
+  Cluster 2 | P = 303.29 kW | Erro = 2.94% | Var = 43.875258
+  Cluster 3 | P = 343.05 kW | Erro = 16.44% | Var = 4.527227
+  Cluster 4 | P = 346.15 kW | Erro = 17.49% | Var = 1.640692
+
+Nível PV = 40%
+  Cluster 1 | P = 716.95 kW | Erro = 21.67% | Var = 4.044259
+  Cluster 2 | P = 664.40 kW | Erro = 12.76% | Var = 60.026049
+  Cluster 3 | P = 659.41 kW | Erro = 11.91% | Var = 7.702708
+  Cluster 4 | P = 638.48 kW | Erro = 8.36% | Var = 1.648649
+
+Nível PV = 60%
+  Cluster 1 | P = 983.00 kW | Erro = 11.22% | Var = 2.938061
+  Cluster 2 | P = 1022.71 kW | Erro = 15.71% | Var = 85.600460
+  Cluster 3 | P = 972.91 kW | Erro = 10.08% | Var = 13.919152
+  Cluster 4 | P = 1105.28 kW | Erro = 25.05% | Var = 8.420219
+
+============================================================
+============================================================
+
+Estimativa com k = 0.75
+
+Nível PV = 20%
+  Cluster 1 | P = 281.36 kW | Erro = 4.50% | Var = 0.729241
+  Cluster 2 | P = 283.07 kW | Erro = 3.92% | Var = 38.220225
+  Cluster 3 | P = 320.18 kW | Erro = 8.67% | Var = 3.943718
+  Cluster 4 | P = 323.07 kW | Erro = 9.66% | Var = 1.429225
+
+Nível PV = 40%
+  Cluster 1 | P = 669.15 kW | Erro = 13.56% | Var = 3.522999
+  Cluster 2 | P = 620.11 kW | Erro = 5.24% | Var = 52.289358
+  Cluster 3 | P = 615.45 kW | Erro = 4.45% | Var = 6.709914
+  Cluster 4 | P = 595.92 kW | Erro = 1.13% | Var = 1.436157
+
+Nível PV = 60%
+  Cluster 1 | P = 917.47 kW | Erro = 3.80% | Var = 2.559377
+  Cluster 2 | P = 954.53 kW | Erro = 8.00% | Var = 74.567512
+  Cluster 3 | P = 908.05 kW | Erro = 2.74% | Var = 12.125128
+  Cluster 4 | P = 1031.59 kW | Erro = 16.71% | Var = 7.334946
+
+============================================================
+============================================================
+
+Estimativa com k = 0.80
+
+Nível PV = 20%
+  Cluster 1 | P = 263.78 kW | Erro = 10.47% | Var = 0.640935
+  Cluster 2 | P = 265.38 kW | Erro = 9.93% | Var = 33.591995
+  Cluster 3 | P = 300.17 kW | Erro = 1.88% | Var = 3.466159
+  Cluster 4 | P = 302.88 kW | Erro = 2.80% | Var = 1.256155
+
+Nível PV = 40%
+  Cluster 1 | P = 627.33 kW | Erro = 6.46% | Var = 3.096386
+  Cluster 2 | P = 581.35 kW | Erro = 1.34% | Var = 45.957444
+  Cluster 3 | P = 576.98 kW | Erro = 2.08% | Var = 5.897386
+  Cluster 4 | P = 558.67 kW | Erro = 5.19% | Var = 1.262247
+
+Nível PV = 60%
+  Cluster 1 | P = 860.13 kW | Erro = 2.68% | Var = 2.249453
+  Cluster 2 | P = 894.87 kW | Erro = 1.25% | Var = 65.537852
+  Cluster 3 | P = 851.30 kW | Erro = 3.68% | Var = 10.656851
+  Cluster 4 | P = 967.12 kW | Erro = 9.42% | Var = 6.446730
+
+============================================================
+============================================================
+
+Estimativa com k = 0.85
+
+Nível PV = 20%
+  Cluster 1 | P = 248.26 kW | Erro = 15.74% | Var = 0.567749
+  Cluster 2 | P = 249.77 kW | Erro = 15.22% | Var = 29.756231
+  Cluster 3 | P = 282.51 kW | Erro = 4.11% | Var = 3.070369
+  Cluster 4 | P = 285.06 kW | Erro = 3.24% | Var = 1.112719
+
+Nível PV = 40%
+  Cluster 1 | P = 590.43 kW | Erro = 0.20% | Var = 2.742819
+  Cluster 2 | P = 547.15 kW | Erro = 7.14% | Var = 40.709708
+  Cluster 3 | P = 543.04 kW | Erro = 7.84% | Var = 5.223982
+  Cluster 4 | P = 525.81 kW | Erro = 10.77% | Var = 1.118115
+
+Nível PV = 60%
+  Cluster 1 | P = 809.53 kW | Erro = 8.41% | Var = 1.992595
+  Cluster 2 | P = 842.23 kW | Erro = 4.71% | Var = 58.054291
+  Cluster 3 | P = 801.22 kW | Erro = 9.35% | Var = 9.439978
+  Cluster 4 | P = 910.23 kW | Erro = 2.98% | Var = 5.710598
+
+============================================================
+============================================================
+
+Estimativa com k = 0.90
+
+Nível PV = 20%
+  Cluster 1 | P = 234.47 kW | Erro = 20.42% | Var = 0.506418
+  Cluster 2 | P = 235.89 kW | Erro = 19.93% | Var = 26.541823
+  Cluster 3 | P = 266.81 kW | Erro = 9.44% | Var = 2.738693
+  Cluster 4 | P = 269.22 kW | Erro = 8.62% | Var = 0.992518
+
+Nível PV = 40%
+  Cluster 1 | P = 557.62 kW | Erro = 5.37% | Var = 2.446527
+  Cluster 2 | P = 516.76 kW | Erro = 12.30% | Var = 36.312054
+  Cluster 3 | P = 512.87 kW | Erro = 12.96% | Var = 4.659663
+  Cluster 4 | P = 496.60 kW | Erro = 15.72% | Var = 0.997331
+
+Nível PV = 60%
+  Cluster 1 | P = 764.56 kW | Erro = 13.50% | Var = 1.777345
+  Cluster 2 | P = 795.44 kW | Erro = 10.00% | Var = 51.782994
+  Cluster 3 | P = 756.71 kW | Erro = 14.39% | Var = 8.420228
+  Cluster 4 | P = 859.66 kW | Erro = 2.74% | Var = 5.093713
+
+============================================================
+============================================================
+
+Estimativa com k = 0.95
+
+Nível PV = 20%
+  Cluster 1 | P = 222.13 kW | Erro = 24.61% | Var = 0.454513
+  Cluster 2 | P = 223.47 kW | Erro = 24.15% | Var = 23.821470
+  Cluster 3 | P = 252.77 kW | Erro = 14.20% | Var = 2.457996
+  Cluster 4 | P = 255.05 kW | Erro = 13.43% | Var = 0.890791
+
+Nível PV = 40%
+  Cluster 1 | P = 528.28 kW | Erro = 10.35% | Var = 2.195775
+  Cluster 2 | P = 489.56 kW | Erro = 16.92% | Var = 32.590320
+  Cluster 3 | P = 485.88 kW | Erro = 17.54% | Var = 4.182080
+  Cluster 4 | P = 470.46 kW | Erro = 20.16% | Var = 0.895112
+
+Nível PV = 60%
+  Cluster 1 | P = 724.32 kW | Erro = 18.05% | Var = 1.595180
+  Cluster 2 | P = 753.58 kW | Erro = 14.74% | Var = 46.475596
+  Cluster 3 | P = 716.88 kW | Erro = 18.89% | Var = 7.557213
+  Cluster 4 | P = 814.42 kW | Erro = 7.86% | Var = 4.571642
+
+============================================================
+============================================================
+
+Estimativa com k = 1.00
+
+Nível PV = 20%
+  Cluster 1 | P = 211.02 kW | Erro = 28.38% | Var = 0.410198
+  Cluster 2 | P = 212.30 kW | Erro = 27.94% | Var = 21.498877
+  Cluster 3 | P = 240.13 kW | Erro = 18.49% | Var = 2.218341
+  Cluster 4 | P = 242.30 kW | Erro = 17.76% | Var = 0.803939
+
+Nível PV = 40%
+  Cluster 1 | P = 501.86 kW | Erro = 14.83% | Var = 1.981687
+  Cluster 2 | P = 465.08 kW | Erro = 21.07% | Var = 29.412764
+  Cluster 3 | P = 461.59 kW | Erro = 21.66% | Var = 3.774327
+  Cluster 4 | P = 446.94 kW | Erro = 24.15% | Var = 0.807838
+
+Nível PV = 60%
+  Cluster 1 | P = 688.10 kW | Erro = 22.15% | Var = 1.439650
+  Cluster 2 | P = 715.90 kW | Erro = 19.00% | Var = 41.944225
+  Cluster 3 | P = 681.04 kW | Erro = 22.95% | Var = 6.820384
+  Cluster 4 | P = 773.70 kW | Erro = 12.46% | Var = 4.125907
+
+============================================================
+
+  >>> RESULTADO FINAL - Cenário 20% - Volt-VAr
+      Potência real      = 294.62 kW
+      Potência estimada  = 372.48 kW
+      Erro               = 26.43%
+      Acerto             = 73.57%
+      Desvio padrão      = 0.8153 kW
+      Pesos:
+        C1: 0.5834
+        C2: 0.0111
+        C3: 0.1079
+        C4: 0.2976
+
+  >>> RESULTADO FINAL - Cenário 40% - Volt-VAr
+      Potência real      = 589.24 kW
+      Potência estimada  = 771.19 kW
+      Erro               = 30.88%
+      Acerto             = 69.12%
+      Desvio padrão      = 1.1665 kW
+      Pesos:
+        C1: 0.2472
+        C2: 0.0167
+        C3: 0.1298
+        C4: 0.6064
+
+  >>> RESULTADO FINAL - Cenário 60% - Volt-VAr
+      Potência real      = 883.86 kW
+      Potência estimada  = 1177.50 kW
+      Erro               = 33.22%
+      Acerto             = 66.78%
+      Desvio padrão      = 1.5838 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0215
+        C3: 0.1324
+        C4: 0.2189
+
+  >>> RESULTADO FINAL - Cenário 20% - Volt-VAr
+      Potência real      = 294.62 kW
+      Potência estimada  = 343.82 kW
+      Erro               = 16.70%
+      Acerto             = 83.30%
+      Desvio padrão      = 0.7526 kW
+      Pesos:
+        C1: 0.5834
+        C2: 0.0111
+        C3: 0.1079
+        C4: 0.2976
+
+  >>> RESULTADO FINAL - Cenário 40% - Volt-VAr
+      Potência real      = 589.24 kW
+      Potência estimada  = 711.87 kW
+      Erro               = 20.81%
+      Acerto             = 79.19%
+      Desvio padrão      = 1.0768 kW
+      Pesos:
+        C1: 0.2472
+        C2: 0.0167
+        C3: 0.1298
+        C4: 0.6064
+
+  >>> RESULTADO FINAL - Cenário 60% - Volt-VAr
+      Potência real      = 883.86 kW
+      Potência estimada  = 1086.92 kW
+      Erro               = 22.97%
+      Acerto             = 77.03%
+      Desvio padrão      = 1.4619 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0215
+        C3: 0.1324
+        C4: 0.2189
+
+  >>> RESULTADO FINAL - Cenário 20% - Volt-VAr
+      Potência real      = 294.62 kW
+      Potência estimada  = 319.27 kW
+      Erro               = 8.37%
+      Acerto             = 91.63%
+      Desvio padrão      = 0.6988 kW
+      Pesos:
+        C1: 0.5834
+        C2: 0.0111
+        C3: 0.1079
+        C4: 0.2976
+
+  >>> RESULTADO FINAL - Cenário 40% - Volt-VAr
+      Potência real      = 589.24 kW
+      Potência estimada  = 661.02 kW
+      Erro               = 12.18%
+      Acerto             = 87.82%
+      Desvio padrão      = 0.9998 kW
+      Pesos:
+        C1: 0.2472
+        C2: 0.0167
+        C3: 0.1298
+        C4: 0.6064
+
+  >>> RESULTADO FINAL - Cenário 60% - Volt-VAr
+      Potência real      = 883.86 kW
+      Potência estimada  = 1009.28 kW
+      Erro               = 14.19%
+      Acerto             = 85.81%
+      Desvio padrão      = 1.3575 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0215
+        C3: 0.1324
+        C4: 0.2189
+
+  >>> RESULTADO FINAL - Cenário 20% - Volt-VAr
+      Potência real      = 294.62 kW
+      Potência estimada  = 297.98 kW
+      Erro               = 1.14%
+      Acerto             = 98.86%
+      Desvio padrão      = 0.6522 kW
+      Pesos:
+        C1: 0.5834
+        C2: 0.0111
+        C3: 0.1079
+        C4: 0.2976
+
+  >>> RESULTADO FINAL - Cenário 40% - Volt-VAr
+      Potência real      = 589.24 kW
+      Potência estimada  = 616.96 kW
+      Erro               = 4.70%
+      Acerto             = 95.30%
+      Desvio padrão      = 0.9332 kW
+      Pesos:
+        C1: 0.2472
+        C2: 0.0167
+        C3: 0.1298
+        C4: 0.6064
+
+  >>> RESULTADO FINAL - Cenário 60% - Volt-VAr
+      Potência real      = 883.86 kW
+      Potência estimada  = 942.00 kW
+      Erro               = 6.58%
+      Acerto             = 93.42%
+      Desvio padrão      = 1.2670 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0215
+        C3: 0.1324
+        C4: 0.2189
+
+  >>> RESULTADO FINAL - Cenário 20% - Volt-VAr
+      Potência real      = 294.62 kW
+      Potência estimada  = 279.36 kW
+      Erro               = 5.18%
+      Acerto             = 94.82%
+      Desvio padrão      = 0.6115 kW
+      Pesos:
+        C1: 0.5834
+        C2: 0.0111
+        C3: 0.1079
+        C4: 0.2976
+
+  >>> RESULTADO FINAL - Cenário 40% - Volt-VAr
+      Potência real      = 589.24 kW
+      Potência estimada  = 578.40 kW
+      Erro               = 1.84%
+      Acerto             = 98.16%
+      Desvio padrão      = 0.8749 kW
+      Pesos:
+        C1: 0.2472
+        C2: 0.0167
+        C3: 0.1298
+        C4: 0.6064
+
+  >>> RESULTADO FINAL - Cenário 60% - Volt-VAr
+      Potência real      = 883.86 kW
+      Potência estimada  = 883.12 kW
+      Erro               = 0.08%
+      Acerto             = 99.92%
+      Desvio padrão      = 1.1878 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0215
+        C3: 0.1324
+        C4: 0.2189
+
+  >>> RESULTADO FINAL - Cenário 20% - Volt-VAr
+      Potência real      = 294.62 kW
+      Potência estimada  = 262.92 kW
+      Erro               = 10.76%
+      Acerto             = 89.24%
+      Desvio padrão      = 0.5755 kW
+      Pesos:
+        C1: 0.5834
+        C2: 0.0111
+        C3: 0.1079
+        C4: 0.2976
+
+  >>> RESULTADO FINAL - Cenário 40% - Volt-VAr
+      Potência real      = 589.24 kW
+      Potência estimada  = 544.37 kW
+      Erro               = 7.61%
+      Acerto             = 92.39%
+      Desvio padrão      = 0.8234 kW
+      Pesos:
+        C1: 0.2472
+        C2: 0.0167
+        C3: 0.1298
+        C4: 0.6064
+
+  >>> RESULTADO FINAL - Cenário 60% - Volt-VAr
+      Potência real      = 883.86 kW
+      Potência estimada  = 831.17 kW
+      Erro               = 5.96%
+      Acerto             = 94.04%
+      Desvio padrão      = 1.1179 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0215
+        C3: 0.1324
+        C4: 0.2189
+
+  >>> RESULTADO FINAL - Cenário 20% - Volt-VAr
+      Potência real      = 294.62 kW
+      Potência estimada  = 248.32 kW
+      Erro               = 15.72%
+      Acerto             = 84.28%
+      Desvio padrão      = 0.5435 kW
+      Pesos:
+        C1: 0.5834
+        C2: 0.0111
+        C3: 0.1079
+        C4: 0.2976
+
+  >>> RESULTADO FINAL - Cenário 40% - Volt-VAr
+      Potência real      = 589.24 kW
+      Potência estimada  = 514.13 kW
+      Erro               = 12.75%
+      Acerto             = 87.25%
+      Desvio padrão      = 0.7777 kW
+      Pesos:
+        C1: 0.2472
+        C2: 0.0167
+        C3: 0.1298
+        C4: 0.6064
+
+  >>> RESULTADO FINAL - Cenário 60% - Volt-VAr
+      Potência real      = 883.86 kW
+      Potência estimada  = 785.00 kW
+      Erro               = 11.19%
+      Acerto             = 88.81%
+      Desvio padrão      = 1.0558 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0215
+        C3: 0.1324
+        C4: 0.2189
+
+  >>> RESULTADO FINAL - Cenário 20% - Volt-VAr
+      Potência real      = 294.62 kW
+      Potência estimada  = 235.25 kW
+      Erro               = 20.15%
+      Acerto             = 79.85%
+      Desvio padrão      = 0.5149 kW
+      Pesos:
+        C1: 0.5834
+        C2: 0.0111
+        C3: 0.1079
+        C4: 0.2976
+
+  >>> RESULTADO FINAL - Cenário 40% - Volt-VAr
+      Potência real      = 589.24 kW
+      Potência estimada  = 487.07 kW
+      Erro               = 17.34%
+      Acerto             = 82.66%
+      Desvio padrão      = 0.7367 kW
+      Pesos:
+        C1: 0.2472
+        C2: 0.0167
+        C3: 0.1298
+        C4: 0.6064
+
+  >>> RESULTADO FINAL - Cenário 60% - Volt-VAr
+      Potência real      = 883.86 kW
+      Potência estimada  = 743.68 kW
+      Erro               = 15.86%
+      Acerto             = 84.14%
+      Desvio padrão      = 1.0003 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0215
+        C3: 0.1324
+        C4: 0.2189
+
+  >>> RESULTADO FINAL - Cenário 20% - Volt-VAr
+      Potência real      = 294.62 kW
+      Potência estimada  = 223.49 kW
+      Erro               = 24.14%
+      Acerto             = 75.86%
+      Desvio padrão      = 0.4892 kW
+      Pesos:
+        C1: 0.5834
+        C2: 0.0111
+        C3: 0.1079
+        C4: 0.2976
+
+  >>> RESULTADO FINAL - Cenário 40% - Volt-VAr
+      Potência real      = 589.24 kW
+      Potência estimada  = 462.72 kW
+      Erro               = 21.47%
+      Acerto             = 78.53%
+      Desvio padrão      = 0.6999 kW
+      Pesos:
+        C1: 0.2472
+        C2: 0.0167
+        C3: 0.1298
+        C4: 0.6064
+
+  >>> RESULTADO FINAL - Cenário 60% - Volt-VAr
+      Potência real      = 883.86 kW
+      Potência estimada  = 706.50 kW
+      Erro               = 20.07%
+      Acerto             = 79.93%
+      Desvio padrão      = 0.9503 kW
+      Pesos:
+        C1: 0.6272
+        C2: 0.0215
+        C3: 0.1324
+        C4: 0.2189
+
+Arquivos salvos:
+  - /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_02/dados/outputs/estimacao_PV/Resultados_da_estimacao_por_clusters_VV.xlsx
+  - /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_02/dados/outputs/estimacao_PV/Resultados_finais_por_cenario_VV.xlsx
+
+Tempo de execução Volt-VAr: 14:37.45
+
+======================================================================
+ESTIMAÇÕES CONCLUÍDAS
+======================================================================
+Tempo total: 29:35.79
+==============================================================================
+STEP 5: PV estimation
+Script: /home/matheus/Documentos/BtM-PV-estimating_BKP_3/BtM-PV-estimating_A1_VoltVar/experimentos/experimento_10_execucoes/execucao_02/estimador_PV/main_estimar_PV_FP1_VoltVar.py
+Started: 2026-09-16T23:59:53
+==============================================================================
+

@@ -1,0 +1,31 @@
+		Dataframe gerado para o FeederA
+		Todos possuem o mesmo número de linhas? sim
+		Todos possuem o mesmo número de colunas? sim
+		Os cabeçalhos são iguais? sim
+		As datas são iguais? sim
+		O df_P possui NaN? não
+		O df_FP possui NaN? não
+
+		Dataframe gerado para o FeederB
+		Todos possuem o mesmo número de linhas? sim
+		Todos possuem o mesmo número de colunas? sim
+		Os cabeçalhos são iguais? sim
+		As datas são iguais? sim
+		O df_P possui NaN? não
+		O df_FP possui NaN? não
+
+		Dataframe gerado para o FeederC
+		Todos possuem o mesmo número de linhas? sim
+		Todos possuem o mesmo número de colunas? sim
+		Os cabeçalhos são iguais? sim
+		As datas são iguais? sim
+		O df_P possui NaN? não
+		O df_FP possui NaN? não
+
+
+Dados processados salvos em: /home/matheus/Documentos/BtM-PV-estimating/dados/inputs/Nodal_PQ_processado.csv
+
+Tempo de processamento: 01m:36s
+
+Data do processamento: 11/05/2026 18:48:17
+
