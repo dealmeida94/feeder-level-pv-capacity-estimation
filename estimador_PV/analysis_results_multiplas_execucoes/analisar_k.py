@@ -1,272 +1,259 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 from pathlib import Path
 
 # ============================================================
-# CONFIGURAÇÃO
+# CONFIGURATION
 # ============================================================
 
 ARQUIVO = Path("Multiple_Executions_Final_Analysis.xlsx")
+ABA = "Final_Results"
+ARQUIVO_SAIDA = Path("Analise_resultados_por_cenario_PV.xlsx")
+DIRETORIO_GRAFICOS = Path("graficos_analise_k")
 
 
 # ============================================================
-# LEITURA
+# LOAD DATA
 # ============================================================
 
-df = pd.read_excel(
-    ARQUIVO,
-    sheet_name="Final_Results"
-)
-
+df = pd.read_excel(ARQUIVO, sheet_name=ABA)
 df.columns = [str(c).strip() for c in df.columns]
 
+required_columns = ["k", "Condition", "Cenário", "Erro (%)"]
+missing = [column for column in required_columns if column not in df.columns]
 
-# ============================================================
-# VERIFICAÇÃO
-# ============================================================
-
-colunas_necessarias = [
-    "k",
-    "Condition",
-    "Cenário",
-    "Erro (%)"
-]
-
-faltantes = [
-    c for c in colunas_necessarias
-    if c not in df.columns
-]
-
-if faltantes:
+if missing:
     raise ValueError(
-        f"Colunas não encontradas: {faltantes}\n\n"
-        f"Colunas disponíveis:\n{list(df.columns)}"
+        f"Required columns not found: {missing}\n"
+        f"Available columns: {list(df.columns)}"
     )
 
+for column in ["k", "Cenário", "Erro (%)"]:
+    df[column] = pd.to_numeric(df[column], errors="coerce")
+
+df["Condition"] = df["Condition"].astype(str).str.strip()
+df = df.dropna(subset=required_columns).copy()
+
+if df.empty:
+    raise ValueError("No valid records found after converting the required columns.")
+
+# Keep penetration scenarios in numeric order (e.g., 20%, 40%, 60%).
+scenarios = sorted(df["Cenário"].unique())
+conditions = sorted(df["Condition"].unique())
+
 
 # ============================================================
-# CONVERSÃO
+# SUMMARY BY PV PENETRATION SCENARIO, INVERTER CONDITION AND k
 # ============================================================
 
-df["k"] = pd.to_numeric(df["k"])
-df["Cenário"] = pd.to_numeric(df["Cenário"])
-df["Erro (%)"] = pd.to_numeric(df["Erro (%)"])
-
-df["Condition"] = (
-    df["Condition"]
-    .astype(str)
-    .str.strip()
+resumo = (
+    df.groupby(["Cenário", "Condition", "k"], as_index=False)
+      .agg(
+          Erro_medio_pct=("Erro (%)", "mean"),
+          Erro_mediano_pct=("Erro (%)", "median"),
+          Desvio_padrao_pct=("Erro (%)", "std"),
+          Erro_minimo_pct=("Erro (%)", "min"),
+          Erro_maximo_pct=("Erro (%)", "max"),
+          N=("Erro (%)", "count"),
+      )
+      .sort_values(["Cenário", "Condition", "k"])
 )
 
-
-# ============================================================
-# ANÁLISE POR k
-# ============================================================
-#
-# Para cada k e condição:
-#   - calcula o erro médio considerando todas as execuções
-#     dos três cenários;
-#   - calcula o menor erro;
-#   - calcula o maior erro;
-#   - informa o número de resultados.
-#
-# Como existem 10 execuções para cada cenário, o resultado
-# também pode ser interpretado como a média dos três erros
-# médios dos cenários.
-# ============================================================
-
-resumo_k = (
-    df
-    .groupby(["Condition", "k"])["Erro (%)"]
-    .agg(
-        Média="mean",
-        Mínimo="min",
-        Máximo="max",
-        N="count"
-    )
-    .reset_index()
-    .sort_values(["Condition", "k"])
-)
+# Standard deviation is undefined when there is only one observation.
+resumo["Desvio_padrao_pct"] = resumo["Desvio_padrao_pct"].fillna(0)
 
 
 # ============================================================
-# MÉDIA DOS CENÁRIOS
-# ============================================================
-#
-# Esta tabela é uma segunda forma de conferir o resultado:
-# primeiro calcula a média de cada cenário para cada k e,
-# depois, calcula a média dos três cenários.
-#
-# Os valores devem ser iguais aos da análise acima, pois há
-# exatamente o mesmo número de execuções (10) em cada cenário.
+# PRINT DETAILED RESULTS FOR EACH PENETRATION SCENARIO
 # ============================================================
 
-media_cenarios = (
-    df
-    .groupby(["Condition", "k", "Cenário"])["Erro (%)"]
-    .mean()
-    .reset_index()
-)
+print("\\n" + "=" * 110)
+print("ERROR ANALYSIS BY PV PENETRATION SCENARIO")
+print("=" * 110)
 
-media_cenarios = (
-    media_cenarios
-    .groupby(["Condition", "k"])["Erro (%)"]
-    .mean()
-    .reset_index(name="Média dos 3 cenários (%)")
-)
+for scenario in scenarios:
+    print(f"\\nPV PENETRATION SCENARIO: {scenario:g}%")
+    print("-" * 110)
 
+    scenario_data = resumo[resumo["Cenário"] == scenario]
 
-# ============================================================
-# JUNTA AS DUAS FORMAS DE CÁLCULO
-# ============================================================
+    for condition in conditions:
+        condition_data = scenario_data[scenario_data["Condition"] == condition]
 
-resultado = resumo_k.merge(
-    media_cenarios,
-    on=["Condition", "k"],
-    how="left"
-)
+        if condition_data.empty:
+            continue
 
-resultado["Diferença entre cálculos (%)"] = (
-    resultado["Média"]
-    - resultado["Média dos 3 cenários (%)"]
-).abs()
-
-
-# ============================================================
-# MOSTRA RESULTADOS
-# ============================================================
-
-print()
-print("=" * 90)
-print("ANÁLISE DO PARÂMETRO k")
-print("=" * 90)
-
-for condicao, grupo in resultado.groupby("Condition"):
-
-    print()
-    print(f"CONDIÇÃO: {condicao}")
-    print("-" * 90)
-
-    print(
-        f"{'k':>6} | "
-        f"{'Média (%)':>12} | "
-        f"{'Mínimo (%)':>12} | "
-        f"{'Máximo (%)':>12} | "
-        f"{'N':>4}"
-    )
-
-    print("-" * 90)
-
-    for _, linha in grupo.iterrows():
-
+        print(f"\\nInverter condition: {condition}")
         print(
-            f"{linha['k']:>6.2f} | "
-            f"{linha['Média']:>12.3f} | "
-            f"{linha['Mínimo']:>12.3f} | "
-            f"{linha['Máximo']:>12.3f} | "
-            f"{int(linha['N']):>4}"
+            condition_data[
+                [
+                    "k",
+                    "Erro_medio_pct",
+                    "Erro_mediano_pct",
+                    "Desvio_padrao_pct",
+                    "Erro_minimo_pct",
+                    "Erro_maximo_pct",
+                    "N",
+                ]
+            ].to_string(
+                index=False,
+                formatters={
+                    "k": "{:.3f}".format,
+                    "Erro_medio_pct": "{:.3f}".format,
+                    "Erro_mediano_pct": "{:.3f}".format,
+                    "Desvio_padrao_pct": "{:.3f}".format,
+                    "Erro_minimo_pct": "{:.3f}".format,
+                    "Erro_maximo_pct": "{:.3f}".format,
+                },
+            )
         )
 
-    print("-" * 90)
+        best = condition_data.loc[condition_data["Erro_medio_pct"].idxmin()]
+        print(
+            f"Best k for this scenario and condition: {best['k']:.3f} "
+            f"(mean error = {best['Erro_medio_pct']:.3f}%, "
+            f"standard deviation = {best['Desvio_padrao_pct']:.3f}%, "
+            f"N = {int(best['N'])})"
+        )
 
 
 # ============================================================
-# VERIFICAÇÃO DA CONTRAPROVA
+# BEST k FOR EACH SCENARIO AND INVERTER CONDITION
 # ============================================================
 
-print()
-print("=" * 90)
-print("CONTRAPROVA — MÉDIA DIRETA x MÉDIA DOS 3 CENÁRIOS")
-print("=" * 90)
+idx_best = resumo.groupby(["Cenário", "Condition"])["Erro_medio_pct"].idxmin()
+melhores = (
+    resumo.loc[idx_best]
+          .sort_values(["Cenário", "Condition"])
+          .reset_index(drop=True)
+)
 
+print("\\n" + "=" * 110)
+print("BEST k BY PV PENETRATION SCENARIO AND INVERTER CONDITION")
+print("=" * 110)
 print(
-    resultado[
+    melhores[
         [
+            "Cenário",
             "Condition",
             "k",
-            "Média",
-            "Média dos 3 cenários (%)",
-            "Diferença entre cálculos (%)"
+            "Erro_medio_pct",
+            "Desvio_padrao_pct",
+            "Erro_minimo_pct",
+            "Erro_maximo_pct",
+            "N",
         ]
     ].to_string(
         index=False,
         formatters={
-            "k": "{:.2f}".format,
-            "Média": "{:.6f}".format,
-            "Média dos 3 cenários (%)": "{:.6f}".format,
-            "Diferença entre cálculos (%)": "{:.10f}".format
-        }
+            "Cenário": "{:g}".format,
+            "k": "{:.3f}".format,
+            "Erro_medio_pct": "{:.3f}".format,
+            "Desvio_padrao_pct": "{:.3f}".format,
+            "Erro_minimo_pct": "{:.3f}".format,
+            "Erro_maximo_pct": "{:.3f}".format,
+        },
     )
 )
 
-print()
-print(
-    "A diferença deve ser zero (ou apenas um valor numérico "
-    "residual de arredondamento)."
+
+# ============================================================
+# OVERALL SUMMARY BY SCENARIO AND CONDITION
+# Average is calculated across all k values and executions.
+# This is descriptive; it is not used to select the best k.
+# ============================================================
+
+resumo_geral = (
+    df.groupby(["Cenário", "Condition"], as_index=False)
+      .agg(
+          Erro_medio_pct=("Erro (%)", "mean"),
+          Desvio_padrao_pct=("Erro (%)", "std"),
+          Erro_minimo_pct=("Erro (%)", "min"),
+          Erro_maximo_pct=("Erro (%)", "max"),
+          N=("Erro (%)", "count"),
+      )
+      .sort_values(["Cenário", "Condition"])
 )
+resumo_geral["Desvio_padrao_pct"] = resumo_geral["Desvio_padrao_pct"].fillna(0)
 
-
-# ============================================================
-# MELHOR k POR CONDIÇÃO
-# ============================================================
-
-print()
-print("=" * 90)
-print("k COM MENOR ERRO MÉDIO")
-print("=" * 90)
-
-for condicao, grupo in resultado.groupby("Condition"):
-
-    melhor = grupo.loc[grupo["Média"].idxmin()]
-
-    print(
-        f"{condicao}: k = {melhor['k']:.2f} "
-        f"-> erro médio = {melhor['Média']:.3f}%"
-    )
-
-
-# ============================================================
-# TABELA FINAL
-# ============================================================
-
-print()
-print("TABELA FINAL")
-print()
-
-tabela = resultado[
-    [
-        "Condition",
-        "k",
-        "Média",
-        "Mínimo",
-        "Máximo",
-        "N"
-    ]
-].copy()
-
-tabela.columns = [
-    "Condition",
-    "k",
-    "Mean Error (%)",
-    "Min. Error (%)",
-    "Max. Error (%)",
-    "N"
-]
-
+print("\\n" + "=" * 110)
+print("OVERALL SUMMARY BY PV PENETRATION SCENARIO AND INVERTER CONDITION")
+print("=" * 110)
 print(
-    tabela.to_string(
+    resumo_geral.to_string(
         index=False,
         formatters={
-            "k": "{:.2f}".format,
-            "Mean Error (%)": "{:.3f}".format,
-            "Min. Error (%)": "{:.3f}".format,
-            "Max. Error (%)": "{:.3f}".format
-        }
+            "Cenário": "{:g}".format,
+            "Erro_medio_pct": "{:.3f}".format,
+            "Desvio_padrao_pct": "{:.3f}".format,
+            "Erro_minimo_pct": "{:.3f}".format,
+            "Erro_maximo_pct": "{:.3f}".format,
+        },
     )
 )
 
-print()
-print(f"Total de combinações k × condição: {len(tabela)}")
-print(
-    "Os valores foram calculados diretamente da aba "
-    "'Final_Results', utilizando os resultados finais de cada execução."
-)
+
+# ============================================================
+# EXPORT TABLES TO EXCEL
+# ============================================================
+
+with pd.ExcelWriter(ARQUIVO_SAIDA, engine="openpyxl") as writer:
+    df.sort_values(["Cenário", "Condition", "k"]).to_excel(
+        writer, sheet_name="Raw_Results", index=False
+    )
+    resumo.to_excel(writer, sheet_name="Summary_by_Scenario_k", index=False)
+    melhores.to_excel(writer, sheet_name="Best_k_by_Scenario", index=False)
+    resumo_geral.to_excel(writer, sheet_name="Overall_by_Scenario", index=False)
+
+print("\\n" + "=" * 110)
+print(f"Analysis complete. Excel report saved to: {ARQUIVO_SAIDA.resolve()}")
+print("Note: the overall summary averages results across all k values;")
+print("use 'Best_k_by_Scenario' to compare the best k separately for each scenario.")
+
+
+# ============================================================
+# PLOT: ALL PV PENETRATION SCENARIOS IN ONE FIGURE
+# ============================================================
+
+DIRETORIO_GRAFICOS.mkdir(parents=True, exist_ok=True)
+
+fig, ax = plt.subplots(figsize=(10, 6))
+
+# One curve for each scenario and inverter condition (six curves total).
+for scenario in scenarios:
+    dados_cenario = resumo[resumo["Cenário"] == scenario]
+
+    for condition in conditions:
+        dados_condicao = (
+            dados_cenario[dados_cenario["Condition"] == condition]
+            .sort_values("k")
+        )
+
+        if dados_condicao.empty:
+            continue
+
+        ax.plot(
+            dados_condicao["k"],
+            dados_condicao["Erro_medio_pct"],
+            marker="o",
+            linewidth=2,
+            markersize=5,
+            label=f"{scenario:g}% - {condition}",
+        )
+
+ax.set_title("Mean PV capacity estimation error vs. parameter k")
+ax.set_xlabel("Parameter k")
+ax.set_ylabel("Mean estimation error (%)")
+ax.set_xticks(sorted(df["k"].unique()))
+ax.grid(True, linestyle="--", alpha=0.5)
+ax.legend(title="PV penetration - inverter condition", ncol=2)
+fig.tight_layout()
+
+arquivo_grafico = DIRETORIO_GRAFICOS / "erro_medio_k_todos_cenarios.png"
+fig.savefig(arquivo_grafico, dpi=300, bbox_inches="tight")
+print(f"Combined plot saved: {arquivo_grafico.resolve()}")
+
+plt.show()
+plt.close(fig)
+
+print(f"Plot saved in: {DIRETORIO_GRAFICOS.resolve()}")
